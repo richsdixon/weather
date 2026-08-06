@@ -1,0 +1,43 @@
+name: Update weather plot
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"   # every 10 minutes, in UTC
+  workflow_dispatch:          # allow manual runs from the Actions tab
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v4
+      with:
+        persist-credentials: false  # we will set our own token below
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.11"
+
+    - name: Install dependencies
+      run: pip install -r requirements.txt
+
+    - name: Run weather script
+      run: python update_weather.py
+
+    - name: Commit and push changes
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+
+        # Check if anything changed
+        if ! git diff --quiet; then
+          git add .
+          git commit -m "Automated weather update"
+          git push
+        else
+          echo "No changes to commit"
+        fi
