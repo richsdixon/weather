@@ -14,8 +14,6 @@ STATIONS = {
     "ISAFFR63": {"nickname": "Saffron Walden", "colour": "#910367"},
 }
 
-from pathlib import Path
-
 REPO_DIR = Path(__file__).resolve().parent
 OUTPUT_DIR = REPO_DIR # or just REPO_DIR if you want root
 
@@ -356,9 +354,7 @@ for index, station_id in enumerate(available_station_ids):
         font={"family": "Arial", "size": 12, "color": "#222222"},
     )
 
-html_path = OUTPUT_DIR / f"wunderground.html"
 fig.write_html(html_path, include_plotlyjs=True)
-fig.show()
 
 print(f"CSV saved to:  {csv_path}")
 print(f"Chart saved to: {html_path}")
