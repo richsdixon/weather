@@ -24,7 +24,7 @@ jobs:
       run: pip install -r requirements.txt
 
     - name: Run weather script
-      run: python update_weather.py
+      run: python wunderground.py
 
     - name: Commit and push changes
       env:
