@@ -2,8 +2,8 @@ name: Update weather plot
 
 on:
   schedule:
-    - cron: "*/10 * * * *"   # every 10 minutes, in UTC
-  workflow_dispatch:          # allow manual runs from the Actions tab
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
 
 jobs:
   build:
@@ -13,7 +13,7 @@ jobs:
     - name: Checkout repo
       uses: actions/checkout@v4
       with:
-        persist-credentials: false  # we will set our own token below
+        persist-credentials: false
 
     - name: Set up Python
       uses: actions/setup-python@v5
@@ -26,6 +26,15 @@ jobs:
     - name: Run weather script
       run: python wunderground.py
 
+    - name: Debug working directory
+      run: |
+        echo "PWD:"
+        pwd
+        echo "Listing files:"
+        ls -la
+        echo "Git status:"
+        git status
+
     - name: Commit and push changes
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -33,7 +42,6 @@ jobs:
         git config user.name "github-actions[bot]"
         git config user.email "github-actions[bot]@users.noreply.github.com"
 
-        # Check if anything changed
         if ! git diff --quiet; then
           git add .
           git commit -m "Automated weather update"
