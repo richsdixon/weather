@@ -14,8 +14,15 @@ STATIONS = {
     "ISAFFR63": {"nickname": "Saffron Walden", "colour": "#910367"},
 }
 
-OUTPUT_DIR = Path(r"C:\Users\RichardDixon\Downloads")
+from pathlib import Path
+
+REPO_DIR = Path(__file__).resolve().parent
+OUTPUT_DIR = REPO_DIR / "docs"  # or just REPO_DIR if you want root
+
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+
+csv_path = OUTPUT_DIR / f"wunderground.csv"
+html_path = OUTPUT_DIR / f"wunderground.html"
 
 LOCATION_COLUMNS = 2
 LOCATION_BOX_LEFT = 0.01
