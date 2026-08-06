@@ -108,7 +108,7 @@ if not station_frames:
 
 weather = pd.concat(station_frames, ignore_index=True)
 
-csv_path = OUTPUT_DIR / f"wunderground_weather_{file_date}.csv"
+csv_path = OUTPUT_DIR / f"wunderground_weather.csv"
 weather.to_csv(csv_path, index=False)
 
 available_station_ids = [
@@ -349,7 +349,7 @@ for index, station_id in enumerate(available_station_ids):
         font={"family": "Arial", "size": 12, "color": "#222222"},
     )
 
-html_path = OUTPUT_DIR / f"wunderground_weather_{file_date}.html"
+html_path = OUTPUT_DIR / f"wunderground.html"
 fig.write_html(html_path, include_plotlyjs=True)
 fig.show()
 
