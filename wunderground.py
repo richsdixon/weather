@@ -17,7 +17,7 @@ STATIONS = {
 from pathlib import Path
 
 REPO_DIR = Path(__file__).resolve().parent
-OUTPUT_DIR = REPO_DIR / "docs"  # or just REPO_DIR if you want root
+OUTPUT_DIR = REPO_DIR / # or just REPO_DIR if you want root
 
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
