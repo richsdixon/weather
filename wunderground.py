@@ -8,10 +8,10 @@ import plotly.graph_objects as go
 import requests
 
 STATIONS = {
-    "ICIREN19": {"nickname": "Cirencester", "colour": "#1f77b4"},
-    "IGREAT245": {"nickname": "Great Missenden", "colour": "#d62728"},
-    "IPEVEN35": {"nickname": "Pevensey Bay", "colour": "#2ca02c"},
-    "ISAFFR63": {"nickname": "Saffron Walden", "colour": "#910367"},
+    "ICIREN71": {"nickname": "Cirencester", "colour": "#1f77b4"},
+    "IBUCKING20": {"nickname": "Great Missenden", "colour": "#d62728"},
+    "IPEVEN21": {"nickname": "Pevensey Bay", "colour": "#2ca02c"},
+    "IESSWEND2": {"nickname": "Saffron Walden", "colour": "#910367"},
     "ILEWES69": {"nickname": "Glynde", "colour": "#ff7f0e"},
 }
 
