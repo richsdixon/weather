@@ -1,4 +1,4 @@
-name: Update weather plot
+name: Update and deploy weather plot
 
 on:
   schedule:
@@ -6,7 +6,13 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -15,7 +21,6 @@ jobs:
     steps:
     - name: Checkout repo
       uses: actions/checkout@v4
-      # Do NOT set persist-credentials: false
 
     - name: Set up Python
       uses: actions/setup-python@v5
@@ -28,25 +33,29 @@ jobs:
     - name: Run weather script
       run: python wunderground.py
 
-    - name: Debug working directory
+    - name: Prepare Pages site
       run: |
-        echo "PWD:"
-        pwd
-        echo "Listing files:"
-        ls -la
-        echo "Git status:"
-        git status
+        mkdir -p site
+        cp wunderground.html site/index.html
+        cp wunderground_weather.csv site/wunderground_weather.csv
 
-    - name: Commit and push changes
-      run: |
-        git config user.name "github-actions[bot]"
-        git config user.email "github-actions[bot]@users.noreply.github.com"
+    - name: Configure GitHub Pages
+      uses: actions/configure-pages@v5
 
-        git add -A
+    - name: Upload Pages artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: site
 
-        if git diff --cached --quiet; then
-          echo "No changes to commit"
-        else
-          git commit -m "Automated weather update"
-          git push
-        fi
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
