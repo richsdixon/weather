@@ -30,19 +30,20 @@ jobs:
     - name: Install dependencies
       run: pip install -r requirements.txt
 
-    - name: Run weather script
+    - name: Generate weather chart
       run: python wunderground.py
 
-    - name: Prepare Pages site
+    - name: Prepare GitHub Pages file
       run: |
+        rm -rf site
         mkdir -p site
-        cp wunderground.html site/index.html
-        cp wunderground_weather.csv site/wunderground_weather.csv
+        cp wunderground.html site/wunderground.html
+        ls -lh site
 
     - name: Configure GitHub Pages
       uses: actions/configure-pages@v5
 
-    - name: Upload Pages artifact
+    - name: Upload GitHub Pages artifact
       uses: actions/upload-pages-artifact@v3
       with:
         path: site
