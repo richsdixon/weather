@@ -19,7 +19,6 @@ OUTPUT_DIR = REPO_DIR # or just REPO_DIR if you want root
 
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-csv_path = OUTPUT_DIR / f"wunderground.csv"
 html_path = OUTPUT_DIR / f"wunderground.html"
 
 LOCATION_COLUMNS = 2
@@ -112,9 +111,6 @@ if not station_frames:
     raise RuntimeError("No station data could be downloaded.")
 
 weather = pd.concat(station_frames, ignore_index=True)
-
-csv_path = OUTPUT_DIR / f"wunderground_weather.csv"
-weather.to_csv(csv_path, index=False)
 
 available_station_ids = [
     station_id
@@ -356,5 +352,4 @@ for index, station_id in enumerate(available_station_ids):
 
 fig.write_html(html_path, include_plotlyjs=True)
 
-print(f"CSV saved to:  {csv_path}")
 print(f"Chart saved to: {html_path}")
