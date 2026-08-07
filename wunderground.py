@@ -12,6 +12,7 @@ STATIONS = {
     "IGREAT245": {"nickname": "Great Missenden", "colour": "#d62728"},
     "IPEVEN35": {"nickname": "Pevensey Bay", "colour": "#2ca02c"},
     "ISAFFR63": {"nickname": "Saffron Walden", "colour": "#910367"},
+    "ILEWES69": {"nickname": "Glynde", "colour": "#ff7f0e"},
 }
 
 REPO_DIR = Path(__file__).resolve().parent
