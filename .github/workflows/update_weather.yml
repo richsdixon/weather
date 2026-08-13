@@ -2,7 +2,7 @@ name: Update and deploy weather plot
 
 on:
   schedule:
-    - cron: "*/2 * * * *"
+    - cron: "*/15 * * * *"
   workflow_dispatch:
 
 permissions:
