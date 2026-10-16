@@ -102,8 +102,8 @@ def download_station_table(station_id):
 
 
 # --- RETRY POLLING LOOP ---
-MAX_ATTEMPTS = 10
-RETRY_DELAY_SECONDS = 15
+MAX_ATTEMPTS = 50
+RETRY_DELAY_SECONDS = 5
 successful_stations = {}
 
 attempt = 1
@@ -289,7 +289,7 @@ fig.update_layout(
     height=750,
     font={"family": "Arial", "size": 13, "color": "#222222"},
     title={
-        "text": f"Temperature and Dew Point — {file_date}",
+        "text": f"Wunderground Temperature and Dewpoint — {file_date}",
         "x": 0.5,
         "xanchor": "center",
     },
