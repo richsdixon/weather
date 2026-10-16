@@ -77,6 +77,7 @@ def download_station_table(station_id):
             time_text = table["Time"].astype(str).str.strip()
             table["Datetime"] = pd.to_datetime(
                 file_date + " " + time_text,
+                format="mixed",
                 errors="coerce",
             )
 
