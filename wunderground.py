@@ -2,6 +2,7 @@ from datetime import datetime
 from io import StringIO
 from math import ceil
 from pathlib import Path
+import time
 from zoneinfo import ZoneInfo
 import pandas as pd
 import plotly.graph_objects as go
@@ -16,10 +17,9 @@ STATIONS = {
 
 REPO_DIR = Path(__file__).resolve().parent
 OUTPUT_DIR = REPO_DIR
-
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-html_path = OUTPUT_DIR / f"wunderground.html"
+html_path = OUTPUT_DIR / "wunderground.html"
 
 LOCATION_COLUMNS = 2
 LOCATION_BOX_LEFT = 0.01
@@ -50,7 +50,9 @@ def download_station_table(station_id):
 
     response = requests.get(
         url,
-        headers={"User-Agent": "Mozilla/5.0"},
+        headers={
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+        },
         timeout=30,
     )
     response.raise_for_status()
@@ -89,40 +91,62 @@ def download_station_table(station_id):
             )
             table = table.sort_values("Datetime")
             table = table.drop_duplicates("Datetime", keep="last")
+
+            if table.empty:
+                raise ValueError("Table rendered zero valid weather rows.")
+
             return table
 
-    raise ValueError(f"Weather table not found for {station_id}")
+    raise ValueError(f"Weather table structure not found for {station_id}")
 
 
-station_frames = []
-failed_stations = []
+# --- RETRY POLLING LOOP ---
+MAX_ATTEMPTS = 10
+RETRY_DELAY_SECONDS = 15
+successful_stations = {}
 
-for station_id, settings in STATIONS.items():
-    try:
-        station_table = download_station_table(station_id)
-        if station_table.empty:
-            raise ValueError("Table returned 0 valid observations.")
-        station_frames.append(station_table)
-        print(
-            f"Downloaded {len(station_table)} observations for "
-            f"{settings['nickname']} ({station_id})"
-        )
-    except Exception as error:
-        print(f"Could not download {station_id}: {error}")
-        failed_stations.append((station_id, settings["nickname"], str(error)))
+attempt = 1
+while len(successful_stations) < len(STATIONS) and attempt <= MAX_ATTEMPTS:
+    print(f"\n[Attempt {attempt}/{MAX_ATTEMPTS}] Fetching weather data...")
+    
+    for station_id, settings in STATIONS.items():
+        if station_id in successful_stations:
+            continue  # Already downloaded
 
-# Check that all locations succeeded
-if failed_stations:
-    missing_details = ", ".join(
-        [f"{nickname} ({sid}): {err}" for sid, nickname, err in failed_stations]
-    )
+        try:
+            table = download_station_table(station_id)
+            successful_stations[station_id] = table
+            print(
+                f"  ✓ Successfully downloaded {len(table)} observations for "
+                f"{settings['nickname']} ({station_id})"
+            )
+        except Exception as error:
+            print(f"  ✗ Could not fetch {settings['nickname']} ({station_id}): {error}")
+
+    if len(successful_stations) < len(STATIONS):
+        if attempt < MAX_ATTEMPTS:
+            print(
+                f"Obtained {len(successful_stations)}/{len(STATIONS)} stations. "
+                f"Retrying missing stations in {RETRY_DELAY_SECONDS} seconds..."
+            )
+            time.sleep(RETRY_DELAY_SECONDS)
+        attempt += 1
+
+# HARD FAILURE GUARD: Ensure ALL 4 stations exist before proceeding
+if len(successful_stations) < len(STATIONS):
+    missing = [
+        f"{STATIONS[sid]['nickname']} ({sid})"
+        for sid in STATIONS
+        if sid not in successful_stations
+    ]
     raise RuntimeError(
-        f"Pipeline failed: Could not pull data for all {len(STATIONS)} locations. "
-        f"Failed locations ({len(failed_stations)}/{len(STATIONS)}): {missing_details}"
+        f"Pipeline aborted. Failed to retrieve data for all 4 stations after {MAX_ATTEMPTS} attempts. "
+        f"Missing stations: {', '.join(missing)}"
     )
 
-weather = pd.concat(station_frames, ignore_index=True)
+print("\nAll 4 locations successfully retrieved. Building HTML chart...")
 
+weather = pd.concat(list(successful_stations.values()), ignore_index=True)
 available_station_ids = list(STATIONS.keys())
 
 master_times = pd.DatetimeIndex(
@@ -351,5 +375,4 @@ for index, station_id in enumerate(available_station_ids):
     )
 
 fig.write_html(html_path, include_plotlyjs=True)
-
-print(f"Chart saved to: {html_path}")
+print(f"Chart successfully saved with all 4 locations to: {html_path}")
