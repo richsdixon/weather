@@ -10,9 +10,8 @@ import requests
 STATIONS = {
     "ICIREN71": {"nickname": "Cirencester", "colour": "#1f77b4"},
     "IBUCKING20": {"nickname": "Great Missenden", "colour": "#d62728"},
-    "IPEVEN21": {"nickname": "Pevensey Bay", "colour": "#2ca02c"},
     "IESSWEND2": {"nickname": "Saffron Walden", "colour": "#910367"},
-    "IORPINGT20": {"nickname": "Orpington", "colour": "#ff7f0e"},
+    "IDEAL50": {"nickname": "Deal", "colour": "#ff7f0e"},
 }
 
 REPO_DIR = Path(__file__).resolve().parent
