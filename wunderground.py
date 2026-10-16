@@ -15,7 +15,7 @@ STATIONS = {
 }
 
 REPO_DIR = Path(__file__).resolve().parent
-OUTPUT_DIR = REPO_DIR # or just REPO_DIR if you want root
+OUTPUT_DIR = REPO_DIR
 
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -95,10 +95,13 @@ def download_station_table(station_id):
 
 
 station_frames = []
+failed_stations = []
 
 for station_id, settings in STATIONS.items():
     try:
         station_table = download_station_table(station_id)
+        if station_table.empty:
+            raise ValueError("Table returned 0 valid observations.")
         station_frames.append(station_table)
         print(
             f"Downloaded {len(station_table)} observations for "
@@ -106,17 +109,21 @@ for station_id, settings in STATIONS.items():
         )
     except Exception as error:
         print(f"Could not download {station_id}: {error}")
+        failed_stations.append((station_id, settings["nickname"], str(error)))
 
-if not station_frames:
-    raise RuntimeError("No station data could be downloaded.")
+# Check that all locations succeeded
+if failed_stations:
+    missing_details = ", ".join(
+        [f"{nickname} ({sid}): {err}" for sid, nickname, err in failed_stations]
+    )
+    raise RuntimeError(
+        f"Pipeline failed: Could not pull data for all {len(STATIONS)} locations. "
+        f"Failed locations ({len(failed_stations)}/{len(STATIONS)}): {missing_details}"
+    )
 
 weather = pd.concat(station_frames, ignore_index=True)
 
-available_station_ids = [
-    station_id
-    for station_id in STATIONS
-    if station_id in weather["Station"].unique()
-]
+available_station_ids = list(STATIONS.keys())
 
 master_times = pd.DatetimeIndex(
     sorted(weather["Datetime"].dropna().unique())
@@ -136,7 +143,6 @@ for station_id in available_station_ids:
         .drop_duplicates("Datetime", keep="last")
     )
 
-    # Visible lines do not create their own hover labels.
     fig.add_trace(
         go.Scatter(
             x=station_data["Datetime"],
@@ -178,7 +184,6 @@ for station_id in available_station_ids:
 
     aligned_station_data[station_id] = aligned
 
-# Build one hover label containing all locations.
 hover_text = []
 hover_y = []
 
@@ -210,7 +215,6 @@ for timestamp in master_times:
         sum(temperatures) / len(temperatures) if temperatures else None
     )
 
-# This single transparent trace controls the complete hover window.
 fig.add_trace(
     go.Scatter(
         x=master_times,
@@ -226,7 +230,6 @@ fig.add_trace(
     )
 )
 
-# Separate line-style legend.
 fig.add_trace(
     go.Scatter(
         x=[None],
@@ -280,8 +283,6 @@ fig.update_layout(
     },
     plot_bgcolor="white",
     paper_bgcolor="white",
-
-    # Do not use "x unified": it creates the unwanted hour heading.
     hovermode="x",
     hoverdistance=100,
     hoverlabel={
@@ -305,7 +306,6 @@ fig.update_layout(
     margin={"l": 80, "r": 40, "t": 80, "b": 70},
 )
 
-# Compact two-column location legend.
 fig.add_shape(
     type="rect",
     xref="paper",
