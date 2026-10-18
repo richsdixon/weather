@@ -1,11 +1,9 @@
 import os
 import shutil
 from pathlib import Path
-from contextlib import ExitStack
 from concurrent.futures import ThreadPoolExecutor
 import numpy as np
 import xarray as xr
-import eccodes as ec
 from ecmwf.opendata import Client
 
 # Force non-interactive Matplotlib backend for GitHub Actions runner
@@ -53,19 +51,14 @@ def extract_line_coords(feature_name, category="cultural", scale="50m"):
                 
     return lines
 
-# Load coastlines and borders for LineCollection rendering
 coastlines = extract_line_coords("coastline", category="physical", scale="50m")
 borders = extract_line_coords("admin_0_boundary_lines_land", category="cultural", scale="50m")
 
 SOURCE_FILE = Path("pg.grib2")
 LSM_FILE = Path("lsm.grib2")
-MEMBER_FOLDER = Path("gust_members")
 OUTPUT_FILE = Path("gust_summary_2x2.png")
 
 # --- HELPER FUNCTIONS ---
-def progress(n, total):
-    print(f"Progress: {n}/{total} steps downloaded")
-
 def crop_region(dataset):
     dataset = dataset.assign_coords(
         longitude=((dataset.longitude + 180) % 360) - 180
@@ -91,7 +84,6 @@ client = Client(source="azure")
 
 def download_single_step(step):
     temp_file = f"step_{step:03d}.tmp"
-    
     client.retrieve(
         date=0,
         time=0,
@@ -103,7 +95,6 @@ def download_single_step(step):
     )
     return temp_file
 
-# Hard-coded to T+90 limit for open-data 10m gusts
 steps = list(range(3, 93, 3))
 
 print(f"Downloading {len(steps)} forecast steps in parallel...")
@@ -142,40 +133,14 @@ land_mask = lsm["lsm"].isel({
 }, drop=True)
 print("Land-sea mask ready.")
 
-# --- 3. SPLIT GRIB MEMBERS ---
-MEMBER_FOLDER.mkdir(exist_ok=True)
-member_files = {}
-
-with ExitStack() as stack:
-    source = stack.enter_context(SOURCE_FILE.open("rb"))
-    handles = {}
-    while True:
-        message = ec.codes_grib_new_from_file(source)
-        if message is None:
-            break
-        try:
-            number = int(ec.codes_get(message, "perturbationNumber"))
-            if number not in handles:
-                path = MEMBER_FOLDER / f"member_{number:02d}.grib2"
-                member_files[number] = path
-                handles[number] = stack.enter_context(path.open("wb"))
-            ec.codes_write(message, handles[number])
-        finally:
-            ec.codes_release(message)
-
-# --- 4. DATA REDUCTION ---
-maxima = []
-for number, path in sorted(member_files.items()):
-    with xr.open_dataset(
-        path, engine="cfgrib", backend_kwargs={"indexpath": ""}
-    ) as member:
-        cropped = crop_region(member)
-        maximum = cropped["fg10"].max("step", keep_attrs=True).load()
-        if "number" not in maximum.dims:
-            maximum = maximum.expand_dims(number=[number])
-        maxima.append(maximum)
-
-gust_max = xr.concat(maxima, dim="number").sortby("number")
+# --- 3. DIRECT DATA PROCESSING ---
+print("Processing GRIB dataset with xarray...")
+with xr.open_dataset(
+    SOURCE_FILE, engine="cfgrib", backend_kwargs={"indexpath": ""}
+) as ds:
+    cropped = crop_region(ds)
+    # Calculate maximum gust across all steps for each member directly
+    gust_max = cropped["fg10"].max(dim="step", keep_attrs=True).load()
 
 gust_field, land_mask = xr.align(gust_max, land_mask, join="exact")
 landgust = (gust_field * land_mask).rename("landgust")
@@ -188,7 +153,7 @@ member_score = (
 
 print(f"Calculations complete for {landgust.sizes['number']} members.")
 
-# --- 5. PLOTTING & VISUALIZATION ---
+# --- 4. PLOTTING & VISUALIZATION ---
 THRESHOLDS_MPH = [50, 70]
 PROB_COLOUR_MAP = "jet"
 PROB_COLOUR_STEP = 10
@@ -294,12 +259,10 @@ with plt.rc_context({"font.family": font_name, "font.size": 11}):
     plt.close(fig_probability)
     print(f"Summary figure saved to {OUTPUT_FILE}")
 
-# --- 6. CLEANUP TEMPORARY FILES ---
+# --- 5. CLEANUP TEMPORARY FILES ---
 print("Cleaning up temporary GRIB files...")
 if SOURCE_FILE.exists():
     SOURCE_FILE.unlink()
 if LSM_FILE.exists():
     LSM_FILE.unlink()
-if MEMBER_FOLDER.exists():
-    shutil.rmtree(MEMBER_FOLDER)
 print("Processing complete.")
