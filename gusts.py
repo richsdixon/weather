@@ -62,7 +62,7 @@ def make_scale(low, high, step, colour_map):
     return bounds, cmap, norm
 
 # --- 1. DATA RETRIEVAL ---
-client = Client(source="ecmwf")
+client = Client(source="azure")
 
 print("Downloading forecast gust data...")
 client.retrieve(
