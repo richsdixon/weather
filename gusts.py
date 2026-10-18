@@ -82,7 +82,7 @@ def download_single_step(step):
     )
     return temp_file
 
-steps = list(range(3, 93, 3)) + list(range(96, 180, 6))
+steps = list(range(3, 93, 3))
 
 print(f"Downloading {len(steps)} forecast steps in parallel...")
 with ThreadPoolExecutor(max_workers=10) as executor:
