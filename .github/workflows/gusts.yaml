@@ -37,7 +37,7 @@ jobs:
           pip install xarray cfgrib ecmwf-opendata eccodes matplotlib numpy
 
       - name: Execute Main Script
-        run: python main.py
+        run: python gusts.py
 
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
