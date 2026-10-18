@@ -2,6 +2,7 @@ import os
 import shutil
 from pathlib import Path
 from contextlib import ExitStack
+from concurrent.futures import ThreadPoolExecutor
 import numpy as np
 import xarray as xr
 import eccodes as ec
@@ -13,6 +14,10 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib import colors
 from matplotlib.collections import LineCollection
+
+# Map feature extraction dependencies
+import cartopy.feature as cfeature
+from shapely.geometry import LineString, MultiLineString, Polygon, MultiPolygon
 
 # --- CONFIGURATION & PATHS ---
 CROP_LAT_NORTH = 62.5
@@ -28,9 +33,29 @@ PLOT_LON_WEST = CROP_LON_WEST
 PLOT_LON_EAST = CROP_LON_EAST
 font_name = "sans-serif"
 
-# Custom line collections for vector layers (override or populate as needed)
-coastlines = globals().get("coastlines", [])
-borders = globals().get("borders", [])
+# --- MAP VECTOR LAYERS ---
+def extract_line_coords(feature_name, category="cultural", scale="50m"):
+    """Extract line coordinate arrays for Matplotlib LineCollection."""
+    feature = cfeature.NaturalEarthFeature(category, feature_name, scale)
+    lines = []
+    
+    for geom in feature.geometries():
+        if isinstance(geom, LineString):
+            lines.append(np.array(geom.coords))
+        elif isinstance(geom, MultiLineString):
+            for line in geom.geoms:
+                lines.append(np.array(line.coords))
+        elif isinstance(geom, Polygon):
+            lines.append(np.array(geom.exterior.coords))
+        elif isinstance(geom, MultiPolygon):
+            for poly in geom.geoms:
+                lines.append(np.array(poly.exterior.coords))
+                
+    return lines
+
+# Load coastlines and borders for LineCollection rendering
+coastlines = extract_line_coords("coastline", category="physical", scale="50m")
+borders = extract_line_coords("admin_0_boundary_lines_land", category="cultural", scale="50m")
 
 SOURCE_FILE = Path("pg.grib2")
 LSM_FILE = Path("lsm.grib2")
@@ -62,9 +87,6 @@ def make_scale(low, high, step, colour_map):
     return bounds, cmap, norm
 
 # --- 1. DATA RETRIEVAL ---
-from concurrent.futures import ThreadPoolExecutor
-
-# Initialize client ONCE outside the function to fetch the token only once
 client = Client(source="azure")
 
 def download_single_step(step):
@@ -81,6 +103,7 @@ def download_single_step(step):
     )
     return temp_file
 
+# Hard-coded to T+90 limit for open-data 10m gusts
 steps = list(range(3, 93, 3))
 
 print(f"Downloading {len(steps)} forecast steps in parallel...")
@@ -240,7 +263,7 @@ with plt.rc_context({"font.family": font_name, "font.size": 11}):
         ax.set_yticks([])
 
     fig_probability.suptitle(
-        f"Next 7 Days: ECMWF Ensemble Gusts | Forecast Time: {forecast_time}",
+        f"Next 90 Hours: ECMWF Ensemble Gusts | Forecast Time: {forecast_time}",
         fontsize=16, y=0.98
     )
 
