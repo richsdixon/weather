@@ -62,21 +62,38 @@ def make_scale(low, high, step, colour_map):
     return bounds, cmap, norm
 
 # --- 1. DATA RETRIEVAL ---
-client = Client(source="azure")
+from concurrent.futures import ThreadPoolExecutor
 
-print("Downloading forecast gust data...")
-client.retrieve(
-    date=0,
-    time=0,
-    stream="enfo",
-    type="pf",
-    param="10fg",
-    step=list(range(0, 147, 3)) + list(range(150, 174, 6)),
-    target=str(SOURCE_FILE),
-    callback=progress
-)
+def download_single_step(step):
+    client = Client(source="azure")
+    temp_file = f"step_{step:03d}.tmp"
+    client.retrieve(
+        date=0,
+        time=0,
+        stream="enfo",
+        type="pf",
+        param="10fg",
+        step=step,
+        target=temp_file
+    )
+    return temp_file
+
+steps = list(range(0, 147, 3)) + list(range(150, 174, 6))
+
+print(f"Downloading {len(steps)} forecast steps in parallel...")
+with ThreadPoolExecutor(max_workers=10) as executor:
+    temp_files = list(executor.map(download_single_step, steps))
+
+print("Concatenating step files into pg.grib2...")
+with open(SOURCE_FILE, "wb") as outfile:
+    for temp_file in temp_files:
+        if os.path.exists(temp_file):
+            with open(temp_file, "rb") as infile:
+                outfile.write(infile.read())
+            os.remove(temp_file)
 
 print("Downloading land-sea mask...")
+client = Client(source="azure")
 client.retrieve(
     date=0,
     time=0,
@@ -84,8 +101,7 @@ client.retrieve(
     type="pf",
     param="lsm",
     step=[0],
-    target=str(LSM_FILE),
-    callback=progress
+    target=str(LSM_FILE)
 )
 
 # --- 2. LAND-SEA MASK PROCESSING ---
