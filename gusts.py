@@ -64,8 +64,10 @@ def make_scale(low, high, step, colour_map):
 # --- 1. DATA RETRIEVAL ---
 from concurrent.futures import ThreadPoolExecutor
 
+# Initialize client ONCE outside the function to fetch the token only once
+client = Client(source="azure")
+
 def download_single_step(step):
-    client = Client(source="azure")
     temp_file = f"step_{step:03d}.tmp"
     client.retrieve(
         date=0,
@@ -93,7 +95,6 @@ with open(SOURCE_FILE, "wb") as outfile:
             os.remove(temp_file)
 
 print("Downloading land-sea mask...")
-client = Client(source="azure")
 client.retrieve(
     date=0,
     time=0,
