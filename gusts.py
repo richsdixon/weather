@@ -69,14 +69,13 @@ client = Client(source="azure")
 
 def download_single_step(step):
     temp_file = f"step_{step:03d}.tmp"
-    param = "10fg3" if step <= 90 else "10fg6"
     
     client.retrieve(
         date=0,
         time=0,
         stream="enfo",
         type="pf",
-        param=param,
+        param="10fg",
         step=step,
         target=temp_file
     )
