@@ -24,7 +24,7 @@ jobs:
       - name: Install System C Libraries
         run: |
           sudo apt-get update
-          sudo apt-get install -y libeccodes-dev
+          sudo apt-get install -y libeccodes-dev libgeos-dev
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -34,10 +34,16 @@ jobs:
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install xarray cfgrib ecmwf-opendata eccodes matplotlib numpy
+          pip install xarray cfgrib ecmwf-opendata eccodes matplotlib numpy cartopy shapely
 
       - name: Execute Main Script
         run: python gusts.py
+
+      - name: Upload Plot as Workflow Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: gust-summary-plot
+          path: gust_summary_2x2.png
 
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
