@@ -2,7 +2,7 @@ name: Run ECMWF Gust Pipeline
 
 on:
   schedule:
-    - cron: '0 7 * * *'
+    - cron: '17 6 * * *' # 06:17 UTC = 07:17 BST (bypasses top-of-hour queues)
   workflow_dispatch:
 
 permissions:
