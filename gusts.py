@@ -1,6 +1,7 @@
 import os
 import shutil
 from pathlib import Path
+from datetime import datetime, timezone
 from concurrent.futures import ThreadPoolExecutor
 import numpy as np
 import xarray as xr
@@ -30,6 +31,26 @@ PLOT_LAT_SOUTH = CROP_LAT_SOUTH
 PLOT_LON_WEST = CROP_LON_WEST
 PLOT_LON_EAST = CROP_LON_EAST
 font_name = "sans-serif"
+
+# --- DETERMINE FORECAST RUN TIME BASED ON CURRENT UTC TIME ---
+now_utc = datetime.now(timezone.utc)
+current_hour = now_utc.hour
+
+if 8 <= current_hour < 20:
+    target_time = 0   # 00Z ensemble run
+    target_date = 0   # Today
+    run_label = "00Z"
+elif current_hour >= 20:
+    target_time = 12  # 12Z ensemble run
+    target_date = 0   # Today
+    run_label = "12Z"
+else:  # 00:00 UTC to 07:59 UTC
+    target_time = 12  # 12Z ensemble run from previous day
+    target_date = -1  # Yesterday
+    run_label = "12Z (Yesterday)"
+
+print(f"Current UTC time: {now_utc.strftime('%Y-%m-%d %H:%M UTC')}")
+print(f"Selected ECMWF ensemble run: {run_label} (time={target_time}, date={target_date})")
 
 # --- MAP VECTOR LAYERS ---
 def extract_line_coords(feature_name, category="cultural", scale="50m"):
@@ -85,8 +106,8 @@ client = Client(source="azure")
 def download_single_step(step):
     temp_file = f"step_{step:03d}.tmp"
     client.retrieve(
-        date=0,
-        time=0,
+        date=target_date,
+        time=target_time,
         stream="enfo",
         type="pf",
         param="10fg",
@@ -97,7 +118,7 @@ def download_single_step(step):
 
 steps = list(range(3, 93, 3))
 
-print(f"Downloading {len(steps)} forecast steps in parallel...")
+print(f"Downloading {len(steps)} forecast steps in parallel for {run_label} run...")
 with ThreadPoolExecutor(max_workers=10) as executor:
     temp_files = list(executor.map(download_single_step, steps))
 
@@ -111,8 +132,8 @@ with open(SOURCE_FILE, "wb") as outfile:
 
 print("Downloading land-sea mask...")
 client.retrieve(
-    date=0,
-    time=0,
+    date=target_date,
+    time=target_time,
     stream="enfo",
     type="pf",
     param="lsm",
