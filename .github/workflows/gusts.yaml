@@ -2,7 +2,7 @@ name: Run ECMWF Gust Pipeline
 
 on:
   schedule:
-    - cron: '17 6 * * *' # 06:17 UTC = 07:17 BST (bypasses top-of-hour queues)
+    - cron: '17 7 * * *' # 07:17 UTC = 08:17 BST
   workflow_dispatch:
 
 permissions:
@@ -20,6 +20,8 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Install System C Libraries
         run: |
@@ -40,13 +42,10 @@ jobs:
         run: python gusts.py
 
       - name: Commit and Push Summary Image
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add gust_summary_2x2.png
-          git commit -m "Auto-update forecast gust summary [skip ci]" || exit 0
-          git pull --rebase origin main
-          git push
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Auto-update forecast gust summary [skip ci]"
+          file_pattern: "gust_summary_2x2.png"
 
       - name: Upload Plot as Workflow Artifact
         uses: actions/upload-artifact@v4
