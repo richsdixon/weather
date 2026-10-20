@@ -25,32 +25,39 @@ CROP_LON_WEST = -12.5
 CROP_LON_EAST = 20.0
 GUST_THRESHOLD = 20  # m/s
 
-# Map bounds and style definitions
 PLOT_LAT_NORTH = CROP_LAT_NORTH
 PLOT_LAT_SOUTH = CROP_LAT_SOUTH
 PLOT_LON_WEST = CROP_LON_WEST
 PLOT_LON_EAST = CROP_LON_EAST
 font_name = "sans-serif"
 
-# --- DETERMINE FORECAST RUN TIME BASED ON CURRENT UTC TIME ---
+SOURCE_FILE = Path("pg.grib2")
+LSM_FILE = Path("lsm.grib2")
+OUTPUT_FILE = Path("gust_summary_2x2.png")
+
+# --- DETERMINE INITIAL FORECAST RUN TIME ---
 now_utc = datetime.now(timezone.utc)
 current_hour = now_utc.hour
+current_minute = now_utc.minute
+total_minutes = current_hour * 60 + current_minute
 
-if 8 <= current_hour < 20:
+# 08:45 UTC (525 min) to 21:45 UTC (1305 min) -> Try 00Z today
+if 525 <= total_minutes < 1305:
     target_time = 0   # 00Z ensemble run
     target_date = 0   # Today
     run_label = "00Z"
-elif current_hour >= 20:
+# 21:45 UTC onwards -> Try 12Z today
+elif total_minutes >= 1305:
     target_time = 12  # 12Z ensemble run
     target_date = 0   # Today
     run_label = "12Z"
-else:  # 00:00 UTC to 07:59 UTC
+# 00:00 UTC to 08:44 UTC -> Try 12Z from yesterday
+else:
     target_time = 12  # 12Z ensemble run from previous day
     target_date = -1  # Yesterday
     run_label = "12Z (Yesterday)"
 
-print(f"Current UTC time: {now_utc.strftime('%Y-%m-%d %H:%M UTC')}")
-print(f"Selected ECMWF ensemble run: {run_label} (time={target_time}, date={target_date})")
+print(f"Current UTC time: {now_utc.strftime('%Y-%m-%d %H:%M UTC')}", flush=True)
 
 # --- MAP VECTOR LAYERS ---
 def extract_line_coords(feature_name, category="cultural", scale="50m"):
@@ -75,10 +82,6 @@ def extract_line_coords(feature_name, category="cultural", scale="50m"):
 coastlines = extract_line_coords("coastline", category="physical", scale="50m")
 borders = extract_line_coords("admin_0_boundary_lines_land", category="cultural", scale="50m")
 
-SOURCE_FILE = Path("pg.grib2")
-LSM_FILE = Path("lsm.grib2")
-OUTPUT_FILE = Path("gust_summary_2x2.png")
-
 # --- HELPER FUNCTIONS ---
 def crop_region(dataset):
     dataset = dataset.assign_coords(
@@ -100,46 +103,82 @@ def make_scale(low, high, step, colour_map):
     norm = colors.BoundaryNorm(bounds, ncolors=cmap.N, clip=True)
     return bounds, cmap, norm
 
-# --- 1. DATA RETRIEVAL ---
+def cleanup_temporary_files():
+    """Remove partial downloaded steps and existing grib files."""
+    for p in Path(".").glob("step_*.tmp"):
+        try:
+            p.unlink()
+        except Exception:
+            pass
+    if SOURCE_FILE.exists():
+        SOURCE_FILE.unlink()
+    if LSM_FILE.exists():
+        LSM_FILE.unlink()
+
+# --- 1. DATA RETRIEVAL WITH FALLBACK ---
 client = Client(source="azure")
 
-def download_single_step(step):
-    temp_file = f"step_{step:03d}.tmp"
+def fetch_ensemble_run(date, time, label):
+    """Attempt to download all forecast steps for a specific date and time."""
+    print(f"Attempting download for {label} run (time={time}, date={date})...", flush=True)
+
+    def download_single_step(step):
+        temp_file = f"step_{step:03d}.tmp"
+        client.retrieve(
+            date=date,
+            time=time,
+            stream="enfo",
+            type="pf",
+            param="10fg",
+            step=step,
+            target=temp_file,
+            progressbar=False
+        )
+        print(f"  [{label}] Downloaded step t+{step:02d}h from Azure", flush=True)
+        return temp_file
+
+    steps = list(range(3, 93, 3))
+
+    with ThreadPoolExecutor(max_workers=10) as executor:
+        temp_files = list(executor.map(download_single_step, steps))
+
+    print(f"Concatenating step files into {SOURCE_FILE}...", flush=True)
+    with open(SOURCE_FILE, "wb") as outfile:
+        for temp_file in temp_files:
+            if os.path.exists(temp_file):
+                with open(temp_file, "rb") as infile:
+                    outfile.write(infile.read())
+                os.remove(temp_file)
+
+    print(f"Downloading land-sea mask for {label} run...", flush=True)
     client.retrieve(
-        date=target_date,
-        time=target_time,
+        date=date,
+        time=time,
         stream="enfo",
         type="pf",
-        param="10fg",
-        step=step,
-        target=temp_file
+        param="lsm",
+        step=[0],
+        target=str(LSM_FILE),
+        progressbar=False
     )
-    return temp_file
+    print("Land-sea mask downloaded successfully.", flush=True)
 
-steps = list(range(3, 93, 3))
-
-print(f"Downloading {len(steps)} forecast steps in parallel for {run_label} run...")
-with ThreadPoolExecutor(max_workers=10) as executor:
-    temp_files = list(executor.map(download_single_step, steps))
-
-print("Concatenating step files into pg.grib2...")
-with open(SOURCE_FILE, "wb") as outfile:
-    for temp_file in temp_files:
-        if os.path.exists(temp_file):
-            with open(temp_file, "rb") as infile:
-                outfile.write(infile.read())
-            os.remove(temp_file)
-
-print("Downloading land-sea mask...")
-client.retrieve(
-    date=target_date,
-    time=target_time,
-    stream="enfo",
-    type="pf",
-    param="lsm",
-    step=[0],
-    target=str(LSM_FILE)
-)
+# Attempt primary run with fallback to 00Z if 12Z is incomplete/missing on Azure
+try:
+    fetch_ensemble_run(target_date, target_time, run_label)
+except Exception as e:
+    if target_time == 12:
+        print(f"\n[WARNING] Failed to download {run_label} ensemble run: {e}", flush=True)
+        print("12Z data is likely not fully uploaded to Azure yet. Falling back to 00Z run...", flush=True)
+        cleanup_temporary_files()
+        
+        target_time = 0
+        target_date = 0
+        run_label = "00Z (Fallback)"
+        fetch_ensemble_run(target_date, target_time, run_label)
+    else:
+        cleanup_temporary_files()
+        raise e
 
 # --- 2. LAND-SEA MASK PROCESSING ---
 with xr.open_dataset(
@@ -152,15 +191,14 @@ lsm["lsm"].attrs = {"long_name": "Binary land mask", "units": "1"}
 land_mask = lsm["lsm"].isel({
     dim: 0 for dim in lsm["lsm"].dims if dim not in ("latitude", "longitude")
 }, drop=True)
-print("Land-sea mask ready.")
+print("Land-sea mask ready.", flush=True)
 
 # --- 3. DIRECT DATA PROCESSING ---
-print("Processing GRIB dataset with xarray...")
+print("Processing GRIB dataset with xarray...", flush=True)
 with xr.open_dataset(
     SOURCE_FILE, engine="cfgrib", backend_kwargs={"indexpath": ""}
 ) as ds:
     cropped = crop_region(ds)
-    # Calculate maximum gust across all steps for each member directly
     gust_max = cropped["fg10"].max(dim="step", keep_attrs=True).load()
 
 gust_field, land_mask = xr.align(gust_max, land_mask, join="exact")
@@ -172,7 +210,7 @@ member_score = (
     (landgust - GUST_THRESHOLD).where(landgust > GUST_THRESHOLD, 0) ** 3
 ).sum(dim=["latitude", "longitude"]).rename("member_score")
 
-print(f"Calculations complete for {landgust.sizes['number']} members.")
+print(f"Calculations complete for {landgust.sizes['number']} members.", flush=True)
 
 # --- 4. PLOTTING & VISUALIZATION ---
 THRESHOLDS_MPH = [50, 70]
@@ -278,12 +316,9 @@ with plt.rc_context({"font.family": font_name, "font.size": 11}):
 
     fig_probability.savefig(OUTPUT_FILE, dpi=300, bbox_inches="tight", facecolor="white")
     plt.close(fig_probability)
-    print(f"Summary figure saved to {OUTPUT_FILE}")
+    print(f"Summary figure saved to {OUTPUT_FILE}", flush=True)
 
 # --- 5. CLEANUP TEMPORARY FILES ---
-print("Cleaning up temporary GRIB files...")
-if SOURCE_FILE.exists():
-    SOURCE_FILE.unlink()
-if LSM_FILE.exists():
-    LSM_FILE.unlink()
-print("Processing complete.")
+print("Cleaning up temporary GRIB files...", flush=True)
+cleanup_temporary_files()
+print("Processing complete.", flush=True)
