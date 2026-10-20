@@ -1,10 +1,19 @@
 import os
+# Silence tqdm progress bars and URL streaming globally
+os.environ["TQDM_DISABLE"] = "1"
+
 import shutil
+import logging
 from pathlib import Path
 from datetime import datetime, timezone
 from concurrent.futures import ThreadPoolExecutor
 import numpy as np
 import xarray as xr
+
+# Disable internal ECMWF / multiurl verbosity
+logging.getLogger("ecmwf.opendata").setLevel(logging.ERROR)
+logging.getLogger("multiurl").setLevel(logging.ERROR)
+
 from ecmwf.opendata import Client
 
 # Force non-interactive Matplotlib backend for GitHub Actions runner
@@ -131,8 +140,7 @@ def fetch_ensemble_run(date, time, label):
             type="pf",
             param="10fg",
             step=step,
-            target=temp_file,
-            progressbar=False
+            target=temp_file
         )
         print(f"  [{label}] Downloaded step t+{step:02d}h from Azure", flush=True)
         return temp_file
@@ -158,8 +166,7 @@ def fetch_ensemble_run(date, time, label):
         type="pf",
         param="lsm",
         step=[0],
-        target=str(LSM_FILE),
-        progressbar=False
+        target=str(LSM_FILE)
     )
     print("Land-sea mask downloaded successfully.", flush=True)
 
