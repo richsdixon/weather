@@ -1,3 +1,7 @@
 site/
 wunderground.html
 wunderground_weather.csv
+#otherfiles
+*.grib2
+*.tmp
+step_*.tmp
