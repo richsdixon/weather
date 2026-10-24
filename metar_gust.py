@@ -135,9 +135,6 @@ df = df.sort_values(["station", "valid"]).reset_index(drop=True)
 print(f"Period: {start_time:%Y-%m-%d %H:%M} to {end_time:%Y-%m-%d %H:%M} UTC")
 print(f"Requested {len(stations):,} stations across {len(stations_by_network)} networks.")
 print(f"Downloaded {len(df):,} observations across {df['station'].nunique()} stations.")
-print(df.head())
-
-
 
 # User settings.
 FIGURE_SIZE = (10, 12)
@@ -157,8 +154,8 @@ COLOUR_MIN = 50
 COLOUR_MAX = 100
 COLOUR_STEP = 5
 
-FONT_REGULAR = r"C:\Users\RichardDixon\AppData\Local\Microsoft\Windows\Fonts\Volte-Regular.otf"
-FONT_BOLD = r"C:\Users\RichardDixon\AppData\Local\Microsoft\Windows\Fonts\Volte-Bold.otf"
+FONT_REGULAR = "/home/richd/.local/share/fonts/Inter_28pt-Medium.ttf"
+FONT_BOLD = "/home/richd/.local/share/fonts/Inter_28pt-Bold.ttf"
 regular_font = fm.FontProperties(fname=FONT_REGULAR)
 bold_font = fm.FontProperties(fname=FONT_BOLD)
 oakwhite = (238/255, 250/255, 255/255)
