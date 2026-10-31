@@ -1,5 +1,4 @@
 site/
-wunderground.html
 wunderground_weather.csv
 #otherfiles
 *.grib2
