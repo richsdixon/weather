@@ -1,8 +1,16 @@
 #!/bin/bash
+set -e # Exit immediately if a command fails
+
 cd ~/git/weather
-# Run your Python script to generate the .html and .png files
+
+# Run Python script
 python3 wunderground.py
-# Package all new files and push them to GitHub Pages
-git add .
-git commit -m "Automated update"
-git push
+
+# Force-stage wunderground.html (bypasses potential gitignore rules)
+git add -f wunderground.html
+
+# Commit changes (if any)
+git commit -m "Automated update" || echo "No changes to commit"
+
+# Push explicitly to origin and your primary branch (e.g., main)
+git push origin main
