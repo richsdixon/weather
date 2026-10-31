@@ -107353,3 +107353,392 @@ Traceback (most recent call last):
   File "/home/richd/git/weather/wunderground.py", line 143, in <module>
     raise RuntimeError(
 RuntimeError: Pipeline aborted. Failed to retrieve data for all 4 stations after 50 attempts. Missing stations: Cirencester (ICIREN71), Great Missenden (IBUCKING20), Saffron Walden (IESSWEND2), Deal (IDEAL50)
+[main 0b179b1] Automated update
+ 1 file changed, 357 insertions(+)
+To https://github.com/richsdixon/weather.git
+   8507fb9..0b179b1  main -> main
+
+[Attempt 1/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 2/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 3/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 4/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 5/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 6/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 7/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 8/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 9/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 10/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 11/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 12/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 13/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 14/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 15/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 16/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 17/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 18/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 19/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+
+
+20261031000000-27h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  84%|████████▎ | 24.3M/29.0M [19:43<47:57, 1.74kB/s][A[A[A
+
+
+20261031000000-27h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  85%|████████▌ | 24.8M/29.0M [19:44<30:44, 2.42kB/s][A[A[A
+
+
+20261031000000-27h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  87%|████████▋ | 25.4M/29.0M [19:44<17:31, 3.62kB/s][A[A[A
+
+
+20261031000000-27h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  90%|████████▉ | 26.0M/29.0M [19:44<09:51, 5.34kB/s][A[A[A
+
+
+20261031000000-27h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  91%|█████████▏| 26.5M/29.0M [19:45<05:57, 7.33kB/s][A[A[A
+
+
+20261031000000-27h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  94%|█████████▎| 27.2M/29.0M [19:45<03:01, 10.8kB/s][A[A[A
+
+
+20261031000000-27h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  96%|█████████▌| 27.8M/29.0M [19:45<01:22, 15.8kB/s][A[A[A
+
+
+20261031000000-27h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  98%|█████████▊| 28.4M/29.0M [19:45<00:28, 22.8kB/s][A[A[A
+
+
+20261031000000-27h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D: 100%|██████████| 29.0M/29.0M [19:46<00:00, 32.7kB/s][A[A[A
+
+
+                                                                                                                                                                                                                                                                                                                                                                                               [A[A[A  [00Z] Downloaded step t+27h from Azure
+
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 20/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 21/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 22/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 23/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 24/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 25/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 26/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 27/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 28/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 29/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 30/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 31/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 32/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 33/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 34/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 35/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 36/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 37/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.20261031000000-3h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  94%|█████████▎| 25.7M/27.5M [20:05<19:17, 1.61kB/s]20261031000000-3h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  96%|█████████▌| 26.4M/27.5M [20:06<08:11, 2.44kB/s]20261031000000-3h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  98%|█████████▊| 26.9M/27.5M [20:06<03:13, 3.41kB/s]20261031000000-3h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D: 100%|██████████| 27.5M/27.5M [20:06<00:00, 5.10kB/s]                                                                                                                                                                                                                                                                                                                                                                                                [00Z] Downloaded step t+03h from Azure
+20261031000000-42h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:   0%|          | 0.00/31.3M [00:00<?, ?B/s]20261031000000-42h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:   2%|▏         | 645k/31.3M [00:00<00:07, 4.29MB/s]20261031000000-42h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:   4%|▍         | 1.26M/31.3M [00:00<00:10, 3.05MB/s]20261031000000-42h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:   6%|▌         | 1.88M/31.3M [00:00<00:11, 2.76MB/s]20261031000000-42h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:   8%|▊         | 2.51M/31.3M [00:00<00:11, 2.62MB/s]20261031000000-42h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  10%|█         | 3.14M/31.3M [00:01<00:12, 2.39MB/s]20261031000000-42h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  12%|█▏        | 3.76M/31.3M [00:01<00:11, 2.53MB/s]20261031000000-42h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  14%|█▍        | 4.39M/31.3M [00:01<00:11, 2.49MB/s]20261031000000-42h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  16%|█▌        | 5.02M/31.3M [00:02<00:11, 2.50MB/s]20261031000000-42h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  18%|█▊        | 5.65M/31.3M [00:02<00:10, 2.56MB/s]20261031000000-42h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  20%|██        | 6.27M/31.3M [00:02<00:10, 2.53MB/s]20261031000000-42h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  22%|██▏       | 6.90M/31.3M [00:02<00:10, 2.47MB/s]20261031000000-42h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  24%|██▍       | 7.53M/31.3M [00:03<00:12, 1.97MB/s]20261031000000-42h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  26%|██▌       | 8.16M/31.3M [00:03<00:11, 2.11MB/s]20261031000000-42h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  28%|██▊       | 8.79M/31.3M [00:03<00:10, 2.23MB/s]20261031000000-42h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  30%|███       | 9.41M/31.3M [00:04<00:10, 2.19MB/s]20261031000000-42h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  32%|███▏      | 10.0M/31.3M [00:04<00:09, 2.37MB/s]20261031000000-42h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  34%|███▍      | 10.7M/31.3M [00:04<00:08, 2.42MB/s]20261031000000-42h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  36%|███▌      | 11.3M/31.3M [00:04<00:08, 2.39MB/s]20261031000000-42h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  38%|███▊      | 11.9M/31.3M [00:05<00:09, 2.06MB/s]20261031000000-42h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  40%|████      | 12.6M/31.3M [00:05<00:09, 2.05MB/s]20261031000000-42h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  42%|████▏     | 13.2M/31.3M [00:05<00:09, 2.08MB/s]20261031000000-42h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  44%|████▍     | 13.8M/31.3M [00:06<00:08, 2.23MB/s]20261031000000-42h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  46%|████▌     | 14.4M/31.3M [00:06<00:07, 2.32MB/s]20261031000000-42h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  48%|████▊     | 15.1M/31.3M [00:06<00:07, 2.21MB/s]20261031000000-42h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  50%|█████     | 15.7M/31.3M [00:07<00:10, 1.60MB/s]20261031000000-42h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  52%|█████▏    | 16.3M/31.3M [00:07<00:09, 1.71MB/s]20261031000000-42h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  54%|█████▍    | 16.9M/31.3M [00:08<00:07, 1.90MB/s]20261031000000-42h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  56%|█████▌    | 17.6M/31.3M [00:08<00:07, 2.04MB/s]20261031000000-42h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  58%|█████▊    | 18.2M/31.3M [00:08<00:06, 2.05MB/s]20261031000000-42h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  60%|██████    | 18.8M/31.3M [00:08<00:06, 2.11MB/s]
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 38/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 39/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 40/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 41/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 42/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 43/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 44/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 45/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 46/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 47/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 48/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 49/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 50/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Traceback (most recent call last):
+  File "/home/richd/git/weather/wunderground.py", line 143, in <module>
+    raise RuntimeError(
+RuntimeError: Pipeline aborted. Failed to retrieve data for all 4 stations after 50 attempts. Missing stations: Cirencester (ICIREN71), Great Missenden (IBUCKING20), Saffron Walden (IESSWEND2), Deal (IDEAL50)
