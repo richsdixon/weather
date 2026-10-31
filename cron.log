@@ -114341,3 +114341,105 @@ To https://github.com/richsdixon/weather.git
 
 All four locations retrieved. Building HTML chart...
 Chart saved with all four locations to: /home/richd/git/weather/wunderground.html
+[main 0e0dda7] Automated update
+ 1 file changed, 15 insertions(+)
+To https://github.com/richsdixon/weather.git
+   888032d..0e0dda7  main -> main
+
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 38/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 39/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 40/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 41/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 42/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 43/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 44/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 45/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 46/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 47/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 48/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 49/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 50/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Traceback (most recent call last):
+  File "/home/richd/git/weather/wunderground.py", line 143, in <module>
+    station_data = (
+RuntimeError: Pipeline aborted. Failed to retrieve data for all 4 stations after 50 attempts. Missing stations: Cirencester (ICIREN71), Great Missenden (IBUCKING20), Saffron Walden (IESSWEND2), Deal (IDEAL50)
