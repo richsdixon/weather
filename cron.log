@@ -108103,3 +108103,503 @@ Traceback (most recent call last):
   File "/home/richd/git/weather/wunderground.py", line 143, in <module>
     raise RuntimeError(
 RuntimeError: Pipeline aborted. Failed to retrieve data for all 4 stations after 50 attempts. Missing stations: Cirencester (ICIREN71), Great Missenden (IBUCKING20), Saffron Walden (IESSWEND2), Deal (IDEAL50)
+[main 94245a4] Automated update
+ 1 file changed, 361 insertions(+)
+To https://github.com/richsdixon/weather.git
+   21bc3f2..94245a4  main -> main
+20261031000000-54h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:   5%|▌         | 1.62M/30.3M [00:05<01:48, 276kB/s]20261031000000-54h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:   7%|▋         | 2.27M/30.3M [00:06<01:16, 383kB/s]20261031000000-54h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  10%|▉         | 2.89M/30.3M [00:06<00:52, 543kB/s]20261031000000-54h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  12%|█▏        | 3.52M/30.3M [00:06<00:37, 743kB/s]20261031000000-54h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  14%|█▎        | 4.14M/30.3M [00:06<00:28, 963kB/s]20261031000000-54h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  16%|█▌        | 4.77M/30.3M [00:07<00:22, 1.21MB/s]20261031000000-54h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  18%|█▊        | 5.39M/30.3M [00:07<00:18, 1.44MB/s]20261031000000-54h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  20%|█▉        | 6.02M/30.3M [00:07<00:15, 1.63MB/s]20261031000000-54h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  22%|██▏       | 6.53M/30.3M [00:08<00:14, 1.67MB/s]20261031000000-54h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  24%|██▎       | 7.16M/30.3M [00:08<00:13, 1.85MB/s]20261031000000-54h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  26%|██▌       | 7.79M/30.3M [00:08<00:11, 2.03MB/s]20261031000000-54h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  28%|██▊       | 8.41M/30.3M [00:08<00:11, 2.07MB/s]20261031000000-54h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  29%|██▉       | 8.92M/30.3M [00:09<00:10, 2.09MB/s]20261031000000-54h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  32%|███▏      | 9.55M/30.3M [00:09<00:10, 2.13MB/s]
+[Attempt 1/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 2/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 3/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 4/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 5/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 6/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 7/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 8/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 9/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 10/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 11/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 12/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 13/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 14/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 15/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 16/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 17/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 18/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 19/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.20261031000000-54h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  34%|███▎      | 10.2M/30.3M [00:14<00:59, 353kB/s] 20261031000000-54h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  36%|███▌      | 10.8M/30.3M [00:15<00:42, 476kB/s]20261031000000-54h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  37%|███▋      | 11.3M/30.3M [00:15<00:33, 597kB/s]20261031000000-54h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  39%|███▉      | 11.8M/30.3M [00:15<00:25, 746kB/s]20261031000000-54h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  41%|████      | 12.4M/30.3M [00:15<00:19, 952kB/s]20261031000000-54h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  43%|████▎     | 13.1M/30.3M [00:16<00:15, 1.14MB/s]20261031000000-54h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  45%|████▌     | 13.7M/30.3M [00:16<00:13, 1.32MB/s]20261031000000-54h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  47%|████▋     | 14.3M/30.3M [00:16<00:10, 1.52MB/s]20261031000000-54h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  49%|████▉     | 14.8M/30.3M [00:16<00:09, 1.70MB/s]20261031000000-54h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  51%|█████     | 15.4M/30.3M [00:17<00:08, 1.90MB/s]20261031000000-54h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  53%|█████▎    | 16.1M/30.3M [00:17<00:07, 2.06MB/s]20261031000000-54h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  55%|█████▌    | 16.7M/30.3M [00:17<00:06, 2.07MB/s]20261031000000-54h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  57%|█████▋    | 17.3M/30.3M [00:18<00:06, 2.15MB/s]20261031000000-54h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  59%|█████▉    | 17.8M/30.3M [00:18<00:06, 2.05MB/s]20261031000000-54h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  61%|██████    | 18.5M/30.3M [00:18<00:06, 2.05MB/s]20261031000000-54h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  63%|██████▎   | 19.1M/30.3M [00:18<00:05, 2.09MB/s]20261031000000-54h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  65%|██████▌   | 19.7M/30.3M [00:19<00:04, 2.22MB/s]20261031000000-54h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  67%|██████▋   | 20.3M/30.3M [00:19<00:04, 2.32MB/s]20261031000000-54h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  69%|██████▉   | 21.0M/30.3M [00:19<00:04, 2.29MB/s]20261031000000-54h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  71%|███████▏  | 21.6M/30.3M [00:20<00:03, 2.39MB/s]20261031000000-54h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  73%|███████▎  | 22.1M/30.3M [00:20<00:03, 2.25MB/s]20261031000000-54h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  75%|███████▌  | 22.7M/30.3M [00:20<00:03, 2.31MB/s]20261031000000-54h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  77%|███████▋  | 23.4M/30.3M [00:20<00:03, 2.33MB/s]20261031000000-54h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  79%|███████▉  | 24.0M/30.3M [00:21<00:02, 2.25MB/s]20261031000000-54h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  81%|████████▏ | 24.6M/30.3M [00:21<00:02, 2.32MB/s]20261031000000-54h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  83%|████████▎ | 25.2M/30.3M [00:21<00:02, 2.37MB/s]20261031000000-54h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  85%|████████▌ | 25.9M/30.3M [00:21<00:01, 2.35MB/s]20261031000000-54h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  88%|████████▊ | 26.5M/30.3M [00:22<00:01, 2.11MB/s]20261031000000-54h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  90%|████████▉ | 27.1M/30.3M [00:22<00:01, 2.26MB/s]20261031000000-54h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  92%|█████████▏| 27.7M/30.3M [00:22<00:01, 2.29MB/s]20261031000000-54h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  94%|█████████▍| 28.4M/30.3M [00:23<00:00, 2.38MB/s]20261031000000-54h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  96%|█████████▌| 29.0M/30.3M [00:23<00:00, 2.40MB/s]20261031000000-54h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  98%|█████████▊| 29.6M/30.3M [00:23<00:00, 2.41MB/s]20261031000000-54h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D: 100%|██████████| 30.3M/30.3M [00:23<00:00, 2.42MB/s]                                                                                                                                                                                                                                                                                                                                                                                                 [00Z] Downloaded step t+54h from Azure
+20261031000000-57h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:   0%|          | 0.00/30.6M [00:00<?, ?B/s]20261031000000-57h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:   2%|▏         | 639k/30.6M [00:00<00:05, 5.48MB/s]20261031000000-57h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:   4%|▍         | 1.25M/30.6M [00:00<00:10, 2.83MB/s]20261031000000-57h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:   6%|▌         | 1.76M/30.6M [00:00<00:11, 2.57MB/s]20261031000000-57h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:   7%|▋         | 2.27M/30.6M [00:00<00:11, 2.53MB/s]20261031000000-57h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:   9%|▉         | 2.90M/30.6M [00:01<00:13, 2.12MB/s]20261031000000-57h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  12%|█▏        | 3.52M/30.6M [00:01<00:12, 2.28MB/s]20261031000000-57h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  14%|█▎        | 4.15M/30.6M [00:01<00:11, 2.32MB/s]20261031000000-57h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  16%|█▌        | 4.77M/30.6M [00:02<00:11, 2.36MB/s]20261031000000-57h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  18%|█▊        | 5.40M/30.6M [00:02<00:10, 2.44MB/s]20261031000000-57h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  20%|█▉        | 6.02M/30.6M [00:02<00:10, 2.48MB/s]20261031000000-57h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  22%|██▏       | 6.65M/30.6M [00:02<00:09, 2.53MB/s]20261031000000-57h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  24%|██▍       | 7.28M/30.6M [00:03<00:09, 2.51MB/s]20261031000000-57h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  26%|██▌       | 7.91M/30.6M [00:03<00:11, 2.09MB/s]20261031000000-57h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  28%|██▊       | 8.54M/30.6M [00:03<00:10, 2.26MB/s]20261031000000-57h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  30%|██▉       | 9.16M/30.6M [00:04<00:10, 2.10MB/s]20261031000000-57h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  32%|███▏      | 9.79M/30.6M [00:04<00:09, 2.23MB/s]20261031000000-57h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  34%|███▎      | 10.3M/30.6M [00:04<00:10, 2.02MB/s]20261031000000-57h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  35%|███▌      | 10.8M/30.6M [00:05<00:11, 1.83MB/s]20261031000000-57h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  37%|███▋      | 11.4M/30.6M [00:05<00:10, 2.01MB/s]20261031000000-57h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  39%|███▉      | 12.1M/30.6M [00:05<00:08, 2.17MB/s]20261031000000-57h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  41%|████▏     | 12.7M/30.6M [00:05<00:08, 2.24MB/s]20261031000000-57h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  43%|████▎     | 13.3M/30.6M [00:06<00:08, 2.14MB/s]20261031000000-57h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  45%|████▌     | 13.9M/30.6M [00:06<00:08, 2.16MB/s]20261031000000-57h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  48%|████▊     | 14.6M/30.6M [00:06<00:07, 2.11MB/s]20261031000000-57h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  50%|████▉     | 15.2M/30.6M [00:07<00:07, 2.29MB/s]20261031000000-57h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  53%|█████▎    | 16.2M/30.6M [00:07<00:05, 2.62MB/s]20261031000000-57h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  56%|█████▌    | 17.1M/30.6M [00:07<00:05, 2.59MB/s]20261031000000-57h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  58%|█████▊    | 17.7M/30.6M [00:08<00:05, 2.51MB/s]20261031000000-57h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  60%|█████▉    | 18.3M/30.6M [00:08<00:05, 2.51MB/s]20261031000000-57h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  62%|██████▏   | 18.9M/30.6M [00:08<00:04, 2.57MB/s]20261031000000-57h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  64%|██████▍   | 19.6M/30.6M [00:08<00:04, 2.52MB/s]20261031000000-57h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  66%|██████▌   | 20.2M/30.6M [00:09<00:04, 2.43MB/s]20261031000000-57h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  68%|██████▊   | 20.8M/30.6M [00:09<00:04, 2.43MB/s]20261031000000-57h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  70%|██████▉   | 21.3M/30.6M [00:09<00:04, 2.21MB/s]20261031000000-57h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  72%|███████▏  | 22.0M/30.6M [00:10<00:04, 1.85MB/s]20261031000000-57h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  74%|███████▍  | 22.6M/30.6M [00:10<00:04, 2.02MB/s]20261031000000-57h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  76%|███████▌  | 23.2M/30.6M [00:10<00:03, 2.17MB/s]20261031000000-57h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  78%|███████▊  | 23.8M/30.6M [00:10<00:03, 2.31MB/s]20261031000000-57h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  80%|███████▉  | 24.5M/30.6M [00:11<00:02, 2.32MB/s]20261031000000-57h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  82%|████████▏ | 25.1M/30.6M [00:11<00:03, 1.58MB/s]20261031000000-57h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  84%|████████▍ | 25.7M/30.6M [00:12<00:02, 1.75MB/s]20261031000000-57h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  86%|████████▌ | 26.3M/30.6M [00:12<00:02, 1.84MB/s]20261031000000-57h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  88%|████████▊ | 27.0M/30.6M [00:12<00:01, 2.03MB/s]20261031000000-57h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  90%|█████████ | 27.6M/30.6M [00:13<00:01, 2.15MB/s]20261031000000-57h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  92%|█████████▏| 28.2M/30.6M [00:13<00:01, 2.21MB/s]20261031000000-57h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  94%|█████████▍| 28.9M/30.6M [00:13<00:00, 2.27MB/s]20261031000000-57h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  96%|█████████▌| 29.4M/30.6M [00:13<00:00, 2.22MB/s]20261031000000-57h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  98%|█████████▊| 30.0M/30.6M [00:14<00:00, 2.29MB/s]20261031000000-57h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D: 100%|██████████| 30.6M/30.6M [00:14<00:00, 2.35MB/s]                                                                                                                                                                                                                                                                                                                                                                                                 [00Z] Downloaded step t+57h from Azure
+20261031000000-36h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:   0%|          | 0.00/31.1M [00:00<?, ?B/s]
+
+
+20261031000000-60h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:   0%|          | 0.00/30.5M [00:00<?, ?B/s][A[A[A20261031000000-36h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:   2%|▏         | 640k/31.1M [00:00<00:06, 4.59MB/s]
+
+
+20261031000000-60h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:   2%|▏         | 640k/30.5M [00:00<00:07, 4.05MB/s][A[A[A
+
+
+20261031000000-60h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:   4%|▎         | 1.13M/30.5M [00:00<00:11, 2.60MB/s][A[A[A20261031000000-36h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:   4%|▍         | 1.25M/31.1M [00:00<00:14, 2.21MB/s]20261031000000-36h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:   6%|▌         | 1.87M/31.1M [00:00<00:13, 2.21MB/s]
+
+
+20261031000000-60h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:   5%|▌         | 1.65M/30.5M [00:00<00:17, 1.69MB/s][A[A[A
+
+
+20261031000000-60h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:   7%|▋         | 2.27M/30.5M [00:01<00:15, 1.92MB/s][A[A[A20261031000000-36h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:   8%|▊         | 2.50M/31.1M [00:01<00:15, 1.91MB/s]20261031000000-36h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  10%|█         | 3.12M/31.1M [00:01<00:14, 2.09MB/s]
+
+
+20261031000000-60h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:   9%|▉         | 2.90M/30.5M [00:01<00:14, 2.01MB/s][A[A[A20261031000000-36h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  12%|█▏        | 3.75M/31.1M [00:01<00:13, 2.15MB/s]
+
+
+20261031000000-60h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  12%|█▏        | 3.52M/30.5M [00:01<00:14, 2.02MB/s][A[A[A20261031000000-36h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  14%|█▍        | 4.37M/31.1M [00:02<00:13, 2.12MB/s]
+
+
+20261031000000-60h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  14%|█▎        | 4.15M/30.5M [00:02<00:13, 2.01MB/s][A[A[A20261031000000-36h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  16%|█▌        | 4.99M/31.1M [00:02<00:12, 2.27MB/s]
+
+
+20261031000000-60h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  16%|█▌        | 4.77M/30.5M [00:02<00:13, 2.01MB/s][A[A[A20261031000000-36h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  18%|█▊        | 5.62M/31.1M [00:02<00:11, 2.34MB/s]
+
+
+20261031000000-60h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  18%|█▊        | 5.40M/30.5M [00:03<00:16, 1.62MB/s][A[A[A
+
+
+20261031000000-60h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  20%|█▉        | 6.03M/30.5M [00:03<00:13, 1.84MB/s][A[A[A20261031000000-36h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  20%|██        | 6.24M/31.1M [00:03<00:17, 1.49MB/s]
+
+
+20261031000000-60h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  22%|██▏       | 6.66M/30.5M [00:03<00:12, 2.01MB/s][A[A[A20261031000000-36h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  22%|██▏       | 6.87M/31.1M [00:03<00:15, 1.67MB/s]
+
+
+20261031000000-60h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  24%|██▍       | 7.29M/30.5M [00:03<00:11, 2.09MB/s][A[A[A20261031000000-36h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  24%|██▍       | 7.49M/31.1M [00:03<00:13, 1.82MB/s]
+
+
+20261031000000-60h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  26%|██▌       | 7.92M/30.5M [00:04<00:10, 2.20MB/s][A[A[A20261031000000-36h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  26%|██▌       | 8.12M/31.1M [00:04<00:11, 2.01MB/s]
+
+
+20261031000000-60h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  28%|██▊       | 8.54M/30.5M [00:04<00:10, 2.27MB/s][A[A[A20261031000000-36h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  28%|██▊       | 8.74M/31.1M [00:04<00:11, 2.08MB/s]
+
+
+20261031000000-60h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  30%|███       | 9.17M/30.5M [00:04<00:10, 2.06MB/s][A[A[A20261031000000-36h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  30%|███       | 9.37M/31.1M [00:04<00:11, 1.97MB/s]
+
+
+20261031000000-60h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  32%|███▏      | 9.79M/30.5M [00:05<00:10, 2.12MB/s][A[A[A
+
+
+20261031000000-60h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  34%|███▍      | 10.4M/30.5M [00:05<00:10, 2.08MB/s][A[A[A20261031000000-36h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  33%|███▎      | 10.4M/31.1M [00:05<00:12, 1.71MB/s]
+
+
+20261031000000-60h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  36%|███▌      | 10.9M/30.5M [00:05<00:10, 2.00MB/s][A[A[A20261031000000-36h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  34%|███▍      | 10.6M/31.1M [00:05<00:12, 1.73MB/s]20261031000000-36h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  36%|███▌      | 11.2M/31.1M [00:06<00:11, 1.87MB/s]20261031000000-36h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  38%|███▊      | 11.9M/31.1M [00:06<00:10, 2.01MB/s]
+
+
+20261031000000-60h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  38%|███▊      | 11.6M/30.5M [00:06<00:13, 1.42MB/s][A[A[A20261031000000-36h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  40%|████      | 12.5M/31.1M [00:06<00:09, 2.09MB/s]
+
+
+20261031000000-60h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  40%|███▉      | 12.1M/30.5M [00:06<00:13, 1.45MB/s][A[A[A20261031000000-36h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  42%|████▏     | 13.1M/31.1M [00:06<00:08, 2.11MB/s]
+
+
+20261031000000-60h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  42%|████▏     | 12.7M/30.5M [00:07<00:11, 1.66MB/s][A[A[A20261031000000-36h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  44%|████▍     | 13.7M/31.1M [00:07<00:08, 2.24MB/s]
+
+
+20261031000000-60h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  44%|████▎     | 13.3M/30.5M [00:07<00:10, 1.78MB/s][A[A[A20261031000000-36h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  46%|████▌     | 14.4M/31.1M [00:07<00:11, 1.52MB/s]
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 20/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 21/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 22/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 23/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 24/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 25/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 26/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 27/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 28/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 29/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 30/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 31/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 32/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 33/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 34/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 35/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 36/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 37/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.20261031000000-36h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  48%|████▊     | 15.0M/31.1M [00:12<00:45, 375kB/s] 20261031000000-36h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  50%|████▉     | 15.5M/31.1M [00:12<00:34, 474kB/s]
+
+
+20261031000000-60h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  46%|████▌     | 13.9M/30.5M [00:12<00:53, 328kB/s] [A[A[A20261031000000-36h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  52%|█████▏    | 16.1M/31.1M [00:13<00:24, 643kB/s]
+
+
+20261031000000-60h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  48%|████▊     | 14.6M/30.5M [00:13<00:37, 448kB/s][A[A[A20261031000000-36h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  54%|█████▍    | 16.7M/31.1M [00:13<00:18, 830kB/s]
+
+
+20261031000000-60h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  50%|████▉     | 15.2M/30.5M [00:13<00:27, 585kB/s][A[A[A20261031000000-36h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  56%|█████▌    | 17.4M/31.1M [00:13<00:13, 1.03MB/s]
+
+
+20261031000000-60h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  52%|█████▏    | 15.8M/30.5M [00:13<00:21, 730kB/s][A[A[A20261031000000-36h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  58%|█████▊    | 18.0M/31.1M [00:14<00:10, 1.26MB/s]
+
+
+20261031000000-60h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  54%|█████▍    | 16.4M/30.5M [00:14<00:15, 930kB/s][A[A[A20261031000000-36h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  60%|█████▉    | 18.6M/31.1M [00:14<00:09, 1.38MB/s]
+
+
+20261031000000-60h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  56%|█████▌    | 17.1M/30.5M [00:14<00:12, 1.12MB/s][A[A[A20261031000000-36h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  62%|██████▏   | 19.2M/31.1M [00:14<00:08, 1.51MB/s]
+
+
+20261031000000-60h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  58%|█████▊    | 17.7M/30.5M [00:14<00:10, 1.29MB/s][A[A[A
+
+
+20261031000000-60h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  60%|██████    | 18.3M/30.5M [00:15<00:08, 1.47MB/s][A[A[A20261031000000-36h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  64%|██████▍   | 19.9M/31.1M [00:15<00:08, 1.44MB/s]
+
+
+20261031000000-60h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  62%|██████▏   | 19.0M/30.5M [00:15<00:07, 1.66MB/s][A[A[A
+
+
+20261031000000-60h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  64%|██████▍   | 19.6M/30.5M [00:15<00:06, 1.83MB/s][A[A[A20261031000000-36h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  66%|██████▌   | 20.5M/31.1M [00:15<00:08, 1.28MB/s]
+
+
+20261031000000-60h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  66%|██████▌   | 20.2M/30.5M [00:15<00:05, 2.00MB/s][A[A[A20261031000000-36h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  68%|██████▊   | 21.1M/31.1M [00:16<00:06, 1.50MB/s]
+
+
+20261031000000-60h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  68%|██████▊   | 20.8M/30.5M [00:16<00:04, 2.07MB/s][A[A[A20261031000000-36h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  70%|██████▉   | 21.7M/31.1M [00:16<00:05, 1.65MB/s]
+
+
+20261031000000-60h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  70%|███████   | 21.5M/30.5M [00:16<00:04, 1.96MB/s][A[A[A20261031000000-36h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  72%|███████▏  | 22.4M/31.1M [00:16<00:05, 1.67MB/s]
+
+
+20261031000000-60h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  72%|███████▏  | 22.1M/30.5M [00:16<00:04, 2.04MB/s][A[A[A20261031000000-36h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  74%|███████▍  | 23.0M/31.1M [00:17<00:04, 1.81MB/s]
+
+
+20261031000000-60h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  76%|███████▌  | 23.1M/30.5M [00:17<00:03, 2.43MB/s][A[A[A20261031000000-36h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  76%|███████▌  | 23.6M/31.1M [00:17<00:04, 1.88MB/s]20261031000000-36h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  78%|███████▊  | 24.2M/31.1M [00:17<00:03, 1.92MB/s]
+
+
+20261031000000-60h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  80%|███████▉  | 24.4M/30.5M [00:17<00:02, 2.59MB/s][A[A[A
+
+
+20261031000000-60h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  82%|████████▏ | 25.0M/30.5M [00:18<00:02, 2.44MB/s][A[A[A20261031000000-36h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  80%|███████▉  | 24.9M/31.1M [00:18<00:03, 1.93MB/s]
+
+
+20261031000000-60h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  84%|████████▍ | 25.6M/30.5M [00:18<00:02, 2.36MB/s][A[A[A20261031000000-36h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  82%|████████▏ | 25.5M/31.1M [00:18<00:03, 1.89MB/s]20261031000000-36h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  84%|████████▍ | 26.1M/31.1M [00:18<00:02, 2.01MB/s]
+
+
+20261031000000-60h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  86%|████████▌ | 26.2M/30.5M [00:18<00:02, 1.87MB/s][A[A[A20261031000000-36h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  86%|████████▌ | 26.7M/31.1M [00:19<00:02, 1.97MB/s]
+
+
+20261031000000-60h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  88%|████████▊ | 26.9M/30.5M [00:19<00:01, 1.94MB/s][A[A[A20261031000000-36h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  88%|████████▊ | 27.4M/31.1M [00:19<00:01, 2.11MB/s]
+
+
+20261031000000-60h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  90%|████████▉ | 27.4M/30.5M [00:19<00:01, 1.94MB/s][A[A[A20261031000000-36h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  90%|████████▉ | 28.0M/31.1M [00:19<00:01, 2.20MB/s]20261031000000-36h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  92%|█████████▏| 28.6M/31.1M [00:19<00:01, 2.17MB/s]
+
+
+20261031000000-60h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  92%|█████████▏| 28.0M/30.5M [00:20<00:01, 1.51MB/s][A[A[A20261031000000-36h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  94%|█████████▍| 29.2M/31.1M [00:20<00:00, 1.99MB/s]
+
+
+20261031000000-60h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  94%|█████████▍| 28.6M/30.5M [00:20<00:01, 1.69MB/s][A[A[A20261031000000-36h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  96%|█████████▌| 29.9M/31.1M [00:20<00:00, 1.87MB/s]
+
+
+20261031000000-60h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  96%|█████████▌| 29.3M/30.5M [00:21<00:01, 1.29MB/s][A[A[A20261031000000-36h-enfo-ef.grib2?st=2026-10-30T13%3A01%3A12Z&se=2026-10-31T13%3A46%3A12Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-10-30T01%3A45%3A16Z&ske=2026-11-06T01%3A45%3A16Z&sks=b&skv=2025-07-05&sig=Vc7vZqry6IcSG149NHazUjPhO5HFzuwha0NnrWnEjY8%3D:  98%|█████████▊| 30.5M/31.1M [00:21<00:00, 1.20MB/s]
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 38/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 39/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 40/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 41/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 42/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 43/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 44/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 45/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 46/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 47/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 48/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 49/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Obtained 0/4 stations. Retrying missing stations in 5 seconds...
+
+[Attempt 50/50] Fetching weather data...
+  ✗ Could not fetch Cirencester (ICIREN71): Table rendered zero valid weather rows.
+  ✗ Could not fetch Great Missenden (IBUCKING20): Table rendered zero valid weather rows.
+  ✗ Could not fetch Saffron Walden (IESSWEND2): Table rendered zero valid weather rows.
+  ✗ Could not fetch Deal (IDEAL50): Table rendered zero valid weather rows.
+Traceback (most recent call last):
+  File "/home/richd/git/weather/wunderground.py", line 143, in <module>
+    raise RuntimeError(
+RuntimeError: Pipeline aborted. Failed to retrieve data for all 4 stations after 50 attempts. Missing stations: Cirencester (ICIREN71), Great Missenden (IBUCKING20), Saffron Walden (IESSWEND2), Deal (IDEAL50)
