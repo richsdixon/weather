@@ -114458,3 +114458,18 @@ To https://github.com/richsdixon/weather.git
 
 All four locations retrieved. Building HTML chart...
 Chart saved with all four locations to: /home/richd/git/weather/wunderground.html
+[main 2026b95] Automated update
+ 1 file changed, 15 insertions(+)
+To https://github.com/richsdixon/weather.git
+   84ee3a9..2026b95  main -> main
+/home/richd/git/weather/wunderground.py:132: FutureWarning: The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.
+  weather = pd.concat(
+
+[Attempt 1/5] Fetching today's weather...
+  OK: Cirencester (ICIREN71) — 162 observations
+  OK: Great Missenden (IBUCKING20) — 162 observations
+  OK: Saffron Walden (IESSWEND2) — 162 observations
+  OK: Deal (IDEAL50) — 162 observations
+
+All four locations retrieved. Building HTML chart...
+Chart saved with all four locations to: /home/richd/git/weather/wunderground.html
