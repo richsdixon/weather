@@ -1,24 +1,24 @@
-from datetime import datetime
-from io import StringIO
+import base64
 from math import ceil
 from pathlib import Path
 import time
-from zoneinfo import ZoneInfo
 import pandas as pd
 import plotly.graph_objects as go
 import requests
 
+API_KEY = "e5b2a88d11944d64b2a88d11946d6443"
 STATIONS = {
     "ICIREN71": {"nickname": "Cirencester", "colour": "#1f77b4"},
     "IBUCKING20": {"nickname": "Great Missenden", "colour": "#d62728"},
     "IESSWEND2": {"nickname": "Saffron Walden", "colour": "#910367"},
     "IDEAL50": {"nickname": "Deal", "colour": "#ff7f0e"},
 }
-
-REPO_DIR = Path(__file__).resolve().parent
-OUTPUT_DIR = REPO_DIR
+TIMEZONE = "Europe/London"
+API_URL = "https://api.weather.com/v2/pws/observations/all/1day"
+FONT_PATH = Path("/home/richd/.local/share/fonts/Inter_28pt-Black.ttf")
+FONT_FAMILY = "Volte, Arial, sans-serif"
+OUTPUT_DIR = Path(_file).resolve().parent if "file_" in globals() else Path.cwd()
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-
 html_path = OUTPUT_DIR / "wunderground.html"
 
 LOCATION_COLUMNS = 2
@@ -29,272 +29,194 @@ LOCATION_FIRST_ROW_Y = 0.955
 LOCATION_ROW_SPACING = 0.033
 LOCATION_COLUMN_X = [0.022, 0.18]
 LOCATION_LABEL_OFFSET = 0.021
+MAX_ATTEMPTS = 5
+RETRY_DELAY_SECONDS = 60
 
-today = datetime.now(ZoneInfo("Europe/London")).date()
-url_date = f"{today.year}-{today.month}-{today.day}"
-file_date = today.strftime("%Y-%m-%d")
+today = pd.Timestamp.now(tz=TIMEZONE).date()
+file_date = today.isoformat()
 
-
-def extract_number(series):
-    return pd.to_numeric(
-        series.astype(str).str.extract(r"(-?\d+(?:\.\d+)?)", expand=False),
-        errors="coerce",
+def download_station_table(session, station_id):
+    try:
+        response = session.get(
+            API_URL,
+            params={
+                "stationId": station_id,
+                "units": "m",
+                "format": "json",
+                "numericPrecision": "decimal",
+                "apiKey": API_KEY,
+            },
+            timeout=30,
+        )
+    except requests.RequestException:
+        raise RuntimeError("Connection failed or timed out.") from None
+    if response.status_code in (401, 403):
+        message = response.text.replace(API_KEY, "[REDACTED]")[:500]
+        raise PermissionError(
+            f"API authentication/access error {response.status_code}: {message}"
+        )
+    if response.status_code == 204:
+        raise ValueError("The station returned no observations.")
+    if response.status_code != 200:
+        message = response.text.replace(API_KEY, "[REDACTED]")[:500]
+        raise RuntimeError(f"API error {response.status_code}: {message}")
+    table = pd.json_normalize(response.json().get("observations", []))
+    if table.empty:
+        raise ValueError("The station returned no observations.")
+    required = {"obsTimeUtc", "metric.tempHigh", "metric.dewptHigh"}
+    missing = required.difference(table.columns)
+    if missing:
+        raise ValueError(f"Missing API fields: {', '.join(sorted(missing))}")
+    table["Observation_UTC"] = pd.to_datetime(
+        table["obsTimeUtc"], utc=True, errors="coerce"
     )
-
-
-def download_station_table(station_id):
-    url = (
-        f"https://www.wunderground.com/dashboard/pws/{station_id}/table/"
-        f"{url_date}/{url_date}/daily"
+    local_times = table["Observation_UTC"].dt.tz_convert(TIMEZONE)
+    table = table.loc[local_times.dt.date == today].copy()
+    # Plot UK wall-clock times consistently, regardless of browser timezone.
+    table["Datetime"] = (
+        table["Observation_UTC"].dt.tz_convert(TIMEZONE).dt.tz_localize(None)
     )
-
-    response = requests.get(
-        url,
-        headers={
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-        },
-        timeout=30,
+    # These match the high-value fields used by the website's table.
+    table["Temperature_C"] = pd.to_numeric(table["metric.tempHigh"], errors="coerce")
+    table["Dew_Point_C"] = pd.to_numeric(table["metric.dewptHigh"], errors="coerce")
+    table["Station"] = station_id
+    table["Location"] = STATIONS[station_id]["nickname"]
+    table = (
+        table.dropna(subset=["Datetime", "Temperature_C", "Dew_Point_C"])
+        .sort_values("Observation_UTC")
+        .drop_duplicates("Observation_UTC", keep="last")
     )
-    response.raise_for_status()
+    if table.empty:
+        raise ValueError("No valid temperature/dew-point observations for today.")
+    return table
 
-    tables = pd.read_html(StringIO(response.text))
-
-    for table in tables:
-        if isinstance(table.columns, pd.MultiIndex):
-            table.columns = [
-                " ".join(str(x) for x in column if str(x) != "nan").strip()
-                for column in table.columns
-            ]
-        else:
-            table.columns = [str(column).strip() for column in table.columns]
-
-        required = {"Time", "Temperature", "Dew Point"}
-        if required.issubset(table.columns):
-            table = table.copy()
-            table["Station"] = station_id
-            table["Location"] = STATIONS[station_id]["nickname"]
-
-            time_text = table["Time"].astype(str).str.strip()
-            table["Datetime"] = pd.to_datetime(
-                file_date + " " + time_text,
-                format="mixed",
-                errors="coerce",
-            )
-
-            temperature_f = extract_number(table["Temperature"])
-            dewpoint_f = extract_number(table["Dew Point"])
-
-            table["Temperature_C"] = (temperature_f - 32) * 5 / 9
-            table["Dew_Point_C"] = (dewpoint_f - 32) * 5 / 9
-
-            table = table.dropna(
-                subset=["Datetime", "Temperature_C", "Dew_Point_C"]
-            )
-            table = table.sort_values("Datetime")
-            table = table.drop_duplicates("Datetime", keep="last")
-
-            if table.empty:
-                raise ValueError("Table rendered zero valid weather rows.")
-
-            return table
-
-    raise ValueError(f"Weather table structure not found for {station_id}")
-
-
-# --- RETRY POLLING LOOP ---
-MAX_ATTEMPTS = 50
-RETRY_DELAY_SECONDS = 5
 successful_stations = {}
-
-attempt = 1
-while len(successful_stations) < len(STATIONS) and attempt <= MAX_ATTEMPTS:
-    print(f"\n[Attempt {attempt}/{MAX_ATTEMPTS}] Fetching weather data...")
-    
-    for station_id, settings in STATIONS.items():
-        if station_id in successful_stations:
-            continue  # Already downloaded
-
-        try:
-            table = download_station_table(station_id)
-            successful_stations[station_id] = table
-            print(
-                f"  ✓ Successfully downloaded {len(table)} observations for "
-                f"{settings['nickname']} ({station_id})"
-            )
-        except Exception as error:
-            print(f"  ✗ Could not fetch {settings['nickname']} ({station_id}): {error}")
-
-    if len(successful_stations) < len(STATIONS):
+with requests.Session() as session:
+    for attempt in range(1, MAX_ATTEMPTS + 1):
+        print(f"\n[Attempt {attempt}/{MAX_ATTEMPTS}] Fetching today's weather...")
+        for station_id, settings in STATIONS.items():
+            if station_id in successful_stations:
+                continue
+            try:
+                table = download_station_table(session, station_id)
+                successful_stations[station_id] = table
+                print(
+                    f"  OK: {settings['nickname']} ({station_id}) — "
+                    f"{len(table):,} observations"
+                )
+            except PermissionError:
+                raise
+            except (RuntimeError, ValueError) as error:
+                print(f"  Failed: {settings['nickname']} ({station_id}): {error}")
+        if len(successful_stations) == len(STATIONS):
+            break
         if attempt < MAX_ATTEMPTS:
             print(
                 f"Obtained {len(successful_stations)}/{len(STATIONS)} stations. "
                 f"Retrying missing stations in {RETRY_DELAY_SECONDS} seconds..."
             )
             time.sleep(RETRY_DELAY_SECONDS)
-        attempt += 1
 
-# HARD FAILURE GUARD: Ensure ALL 4 stations exist before proceeding
 if len(successful_stations) < len(STATIONS):
     missing = [
-        f"{STATIONS[sid]['nickname']} ({sid})"
-        for sid in STATIONS
-        if sid not in successful_stations
+        f"{settings['nickname']} ({station_id})"
+        for station_id, settings in STATIONS.items()
+        if station_id not in successful_stations
     ]
     raise RuntimeError(
-        f"Pipeline aborted. Failed to retrieve data for all 4 stations after {MAX_ATTEMPTS} attempts. "
+        f"Pipeline aborted after {MAX_ATTEMPTS} attempts. "
         f"Missing stations: {', '.join(missing)}"
     )
 
-print("\nAll 4 locations successfully retrieved. Building HTML chart...")
-
-weather = pd.concat(list(successful_stations.values()), ignore_index=True)
-available_station_ids = list(STATIONS.keys())
-
-master_times = pd.DatetimeIndex(
-    sorted(weather["Datetime"].dropna().unique())
+print("\nAll four locations retrieved. Building HTML chart...")
+weather = pd.concat(
+    [successful_stations[station_id] for station_id in STATIONS],
+    ignore_index=True,
 )
-
+available_station_ids = list(STATIONS)
+master_times = pd.DatetimeIndex(sorted(weather["Datetime"].dropna().unique()))
 fig = go.Figure()
 aligned_station_data = {}
 
 for station_id in available_station_ids:
     settings = STATIONS[station_id]
-    nickname = settings["nickname"]
-    colour = settings["colour"]
-
     station_data = (
         weather.loc[weather["Station"] == station_id]
-        .sort_values("Datetime")
+        .sort_values("Observation_UTC")
         .drop_duplicates("Datetime", keep="last")
+        .sort_values("Datetime")
     )
-
-    fig.add_trace(
-        go.Scatter(
+    for column, label, dash in [
+        ("Temperature_C", "temperature", "solid"),
+        ("Dew_Point_C", "dew point", "dash"),
+    ]:
+        fig.add_trace(go.Scatter(
             x=station_data["Datetime"],
-            y=station_data["Temperature_C"],
+            y=station_data[column],
             mode="lines",
-            line={"color": colour, "width": 2.5},
-            name=f"{nickname} temperature",
+            line={"color": settings["colour"], "width": 2.5, "dash": dash},
+            name=f"{settings['nickname']} {label}",
             showlegend=False,
             hoverinfo="skip",
-        )
-    )
-
-    fig.add_trace(
-        go.Scatter(
-            x=station_data["Datetime"],
-            y=station_data["Dew_Point_C"],
-            mode="lines",
-            line={"color": colour, "width": 2.5, "dash": "dash"},
-            name=f"{nickname} dew point",
-            showlegend=False,
-            hoverinfo="skip",
-        )
-    )
-
+        ))
     observations = station_data.set_index("Datetime")[
         ["Temperature_C", "Dew_Point_C"]
     ]
-
     aligned = observations.reindex(master_times).ffill()
-
     observation_times = pd.Series(
-        observations.index.strftime("%H%M"),
-        index=observations.index,
+        observations.index.strftime("%H%M"), index=observations.index
     )
-
-    aligned["Observation_Time"] = (
-        observation_times.reindex(master_times).ffill()
-    )
-
+    aligned["Observation_Time"] = observation_times.reindex(master_times).ffill()
     aligned_station_data[station_id] = aligned
 
-hover_text = []
-hover_y = []
-
+hover_text, hover_y = [], []
 for timestamp in master_times:
-    location_sections = []
-    temperatures = []
-
+    location_sections, temperatures = [], []
     for station_id in available_station_ids:
         settings = STATIONS[station_id]
         row = aligned_station_data[station_id].loc[timestamp]
-
-        if (
-            pd.isna(row["Observation_Time"])
-            or pd.isna(row["Temperature_C"])
-            or pd.isna(row["Dew_Point_C"])
-        ):
+        if row[["Observation_Time", "Temperature_C", "Dew_Point_C"]].isna().any():
             continue
-
         location_sections.append(
-            f"<span style='color:{settings['colour']}'>●</span> "
+            f"<span style='color:{settings['colour']}'>&#9679;</span> "
             f"<b>{settings['nickname']}: {row['Observation_Time']}</b><br>"
             f"    Temperature: {row['Temperature_C']:.1f} °C<br>"
             f"    Dewpoint: {row['Dew_Point_C']:.1f} °C"
         )
         temperatures.append(row["Temperature_C"])
-
     hover_text.append("<br><br>".join(location_sections))
-    hover_y.append(
-        sum(temperatures) / len(temperatures) if temperatures else None
-    )
+    hover_y.append(sum(temperatures) / len(temperatures) if temperatures else None)
 
-fig.add_trace(
-    go.Scatter(
-        x=master_times,
-        y=hover_y,
-        text=hover_text,
-        mode="markers",
-        marker={
-            "size": 18,
-            "color": "rgba(0,0,0,0)",
-        },
-        showlegend=False,
-        hovertemplate="%{text}<extra></extra>",
-    )
-)
-
-fig.add_trace(
-    go.Scatter(
-        x=[None],
-        y=[None],
-        mode="lines",
-        line={"color": "#333333", "width": 2.5},
-        name="Temperature",
-        hoverinfo="skip",
-    )
-)
-
-fig.add_trace(
-    go.Scatter(
-        x=[None],
-        y=[None],
-        mode="lines",
-        line={"color": "#333333", "width": 2.5, "dash": "dash"},
-        name="Dew point",
-        hoverinfo="skip",
-    )
-)
+fig.add_trace(go.Scatter(
+    x=master_times,
+    y=hover_y,
+    text=hover_text,
+    mode="markers",
+    marker={"size": 18, "color": "rgba(0,0,0,0)"},
+    showlegend=False,
+    hovertemplate="%{text}<extra></extra>",
+))
+for label, dash in [("Temperature", "solid"), ("Dew point", "dash")]:
+    fig.add_trace(go.Scatter(
+        x=[None], y=[None], mode="lines",
+        line={"color": "#333333", "width": 2.5, "dash": dash},
+        name=label, hoverinfo="skip",
+    ))
 
 location_rows = ceil(len(available_station_ids) / LOCATION_COLUMNS)
 location_box_bottom = (
-    LOCATION_FIRST_ROW_Y
-    - (location_rows - 1) * LOCATION_ROW_SPACING
-    - 0.022
+    LOCATION_FIRST_ROW_Y - (location_rows - 1) * LOCATION_ROW_SPACING - 0.022
 )
-
 fig.update_layout(
     width=1000,
     height=750,
-    font={"family": "Arial", "size": 13, "color": "#222222"},
+    font={"family": FONT_FAMILY, "size": 13, "color": "#222222"},
     title={
         "text": f"Wunderground Temperature and Dewpoint — {file_date}",
-        "x": 0.5,
-        "xanchor": "center",
+        "x": 0.5, "xanchor": "center",
     },
     xaxis={
-        "title": "Hour",
+        "title": "Hour (UK time)",
         "tickmode": "linear",
         "dtick": 60 * 60 * 1000,
         "tickformat": "%H",
@@ -311,7 +233,7 @@ fig.update_layout(
     hovermode="x",
     hoverdistance=100,
     hoverlabel={
-        "font": {"family": "Arial", "size": 14},
+        "font": {"family": FONT_FAMILY, "size": 14},
         "bgcolor": "#eeeeee",
         "bordercolor": "#999999",
         "align": "left",
@@ -325,55 +247,52 @@ fig.update_layout(
         "bgcolor": "#eeeeee",
         "bordercolor": "#aaaaaa",
         "borderwidth": 1,
-        "font": {"family": "Arial", "size": 12},
+        "font": {"family": FONT_FAMILY, "size": 12},
         "itemsizing": "constant",
     },
-    margin={"l": 80, "r": 40, "t": 80, "b": 70},
+    margin={"l": 80, "r": 40, "t": 80, "b": 90},
 )
-
 fig.add_shape(
-    type="rect",
-    xref="paper",
-    yref="paper",
-    x0=LOCATION_BOX_LEFT,
-    x1=LOCATION_BOX_RIGHT,
-    y0=location_box_bottom,
-    y1=LOCATION_BOX_TOP,
+    type="rect", xref="paper", yref="paper",
+    x0=LOCATION_BOX_LEFT, x1=LOCATION_BOX_RIGHT,
+    y0=location_box_bottom, y1=LOCATION_BOX_TOP,
     fillcolor="#eeeeee",
     line={"color": "#aaaaaa", "width": 1},
     layer="above",
 )
-
 for index, station_id in enumerate(available_station_ids):
-    row = index // LOCATION_COLUMNS
-    column = index % LOCATION_COLUMNS
+    row, column = divmod(index, LOCATION_COLUMNS)
     x_position = LOCATION_COLUMN_X[column]
     y_position = LOCATION_FIRST_ROW_Y - row * LOCATION_ROW_SPACING
     settings = STATIONS[station_id]
-
     fig.add_shape(
-        type="line",
-        xref="paper",
-        yref="paper",
-        x0=x_position,
-        x1=x_position + 0.014,
-        y0=y_position,
-        y1=y_position,
+        type="line", xref="paper", yref="paper",
+        x0=x_position, x1=x_position + 0.014,
+        y0=y_position, y1=y_position,
         line={"color": settings["colour"], "width": 4},
         layer="above",
     )
-
     fig.add_annotation(
-        xref="paper",
-        yref="paper",
-        x=x_position + LOCATION_LABEL_OFFSET,
-        y=y_position,
-        text=settings["nickname"],
-        showarrow=False,
-        xanchor="left",
-        yanchor="middle",
-        font={"family": "Arial", "size": 12, "color": "#222222"},
+        xref="paper", yref="paper",
+        x=x_position + LOCATION_LABEL_OFFSET, y=y_position,
+        text=settings["nickname"], showarrow=False,
+        xanchor="left", yanchor="middle",
+        font={"family": FONT_FAMILY, "size": 12, "color": "#222222"},
     )
-
-fig.write_html(html_path, include_plotlyjs=True)
-print(f"Chart successfully saved with all 4 locations to: {html_path}")
+fig.add_annotation(
+    xref="paper", yref="paper", x=1, y=-0.12,
+    text="Data provided by Weather Underground",
+    showarrow=False, xanchor="right",
+    font={"family": FONT_FAMILY, "size": 11, "color": "#666666"},
+)
+html = fig.to_html(include_plotlyjs=True, full_html=True)
+if FONT_PATH.is_file():
+    font_data = base64.b64encode(FONT_PATH.read_bytes()).decode("ascii")
+    font_css = (
+        "<style>@font-face{font-family:'Volte';"
+        f"src:url(data:font/otf;base64,{font_data}) format('opentype');"
+        "font-weight:400;font-style:normal;}</style>"
+    )
+    html = html.replace("</head>", font_css + "</head>", 1)
+html_path.write_text(html, encoding="utf-8")
+print(f"Chart saved with all four locations to: {html_path}")
