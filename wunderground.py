@@ -129,6 +129,7 @@ if len(successful_stations) < len(STATIONS):
     )
 
 print("\nAll four locations retrieved. Building HTML chart...")
+pull_time = pd.Timestamp.now(tz=TIMEZONE).strftime("%d%m%y | %H%M")
 weather = pd.concat(
     [successful_stations[station_id] for station_id in STATIONS],
     ignore_index=True,
@@ -215,6 +216,14 @@ fig.update_layout(
         "text": f"Wunderground Temperature and Dewpoint — {file_date}",
         "x": 0.5, "xanchor": "center",
     },
+    annotations=[{
+        "xref": "paper", "yref": "paper",
+        "x": 1, "y": 1.08,
+        "text": pull_time,
+        "showarrow": False,
+        "xanchor": "right", "yanchor": "top",
+        "font": {"family": FONT_FAMILY, "size": 10, "color": "#666666"},
+    }],
     xaxis={
         "title": "Hour (UK time)",
         "tickmode": "linear",
